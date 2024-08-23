@@ -9,12 +9,12 @@ namespace OrleansPOC.Endpoints;
 
 public static class SampleEndpoints
 {
-    public static async Task<Ok<string>> StartPublisherAsync(IGrainFactory grainFactory, ILogger<IEndpointLogger> logger)
+    public static async Task<Ok<string>> StartPublisherAsync([FromRoute] int intervalInSeconds, IGrainFactory grainFactory, ILogger<IEndpointLogger> logger)
     {
         logger.LogInformation("Starting publisher grain");
 
         var publisherGrain = grainFactory.GetGrain<IPublisherGrain>(Guid.Empty);
-        await publisherGrain.StartAsync();
+        await publisherGrain.StartAsync(TimeSpan.FromSeconds(intervalInSeconds));
 
         logger.LogInformation("Publisher grain started with Id {GrainId}", publisherGrain.GetPrimaryKey());
         return TypedResults.Ok($"Publishing grain started with Id {publisherGrain.GetPrimaryKey()}");

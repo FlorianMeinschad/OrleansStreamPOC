@@ -17,18 +17,7 @@ public class PublisherGrain : Grain, IPublisherGrain
         _grainRuntime = grainRuntime;
     }
 
-    public Task StartAsync()
-    {
-        return Task.CompletedTask;
-    }
-
-    public Task StopAsync()
-    {
-        DeactivateOnIdle();
-        return Task.CompletedTask;
-    }
-
-    public override Task OnActivateAsync(CancellationToken cancellationToken)
+    public Task StartAsync(TimeSpan interval)
     {
         _stream = _streamProvider.GetStream<string>(StreamChannelIds.STREAM_ID);
 
@@ -37,8 +26,14 @@ public class PublisherGrain : Grain, IPublisherGrain
         this.RegisterGrainTimer<object>(_ =>
         {
             return _stream.OnNextAsync("Message sent from publisher");
-        }, null, TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1));
+        }, null, TimeSpan.FromSeconds(1), interval);
 
-        return base.OnActivateAsync(cancellationToken);
+        return Task.CompletedTask;
+    }
+
+    public Task StopAsync()
+    {
+        DeactivateOnIdle();
+        return Task.CompletedTask;
     }
 }

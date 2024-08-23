@@ -50,7 +50,7 @@ public class SubscriberGrain : Grain, ISubscriberGrain
     }
 
     private Task OnUpdateSuccessAsync(string publication) {
-        _logger.LogInformation("Subscriber Grain {GrainId} received publication {Publication}", this.GetPrimaryKeyString(), publication);
+        _logger.LogInformation("Subscriber Grain {GrainId} on Silo {Silo} received publication {Publication}", this.GetPrimaryKeyString(), _grainRuntime.SiloAddress, publication);
         return Task.CompletedTask;
     }
 

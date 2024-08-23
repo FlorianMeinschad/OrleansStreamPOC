@@ -31,7 +31,7 @@ public static class Silo
             WebApplication app = builder.Build();
             app.Map("/dashboard", x => x.UseOrleansDashboard());
 
-            app.Map("/pub", SampleEndpoints.StartPublisherAsync);
+            app.Map("/pub/{intervalInSeconds:int}", SampleEndpoints.StartPublisherAsync);
             app.Map("/sub/{numOfSubs:int}", SampleEndpoints.StartSubscribersAsync);
 
             Log.Information("Starting Host");
