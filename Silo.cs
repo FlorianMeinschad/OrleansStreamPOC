@@ -1,0 +1,47 @@
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using OrleansPOC.Config;
+using OrleansPOC.Endpoints;
+using OrleansPOC.Extensions;
+using Serilog;
+using Serilog.Events;
+
+namespace OrleansPOC;
+
+public static class Silo
+{
+    public static void Startup(SiloConfig config)
+    {
+        try
+        {
+            WebApplicationBuilder builder = WebApplication.CreateBuilder([]);
+            builder.WebHost.UseUrls(config.Urls);
+
+            Log.Logger = new LoggerConfiguration()
+                .WriteTo.Console().MinimumLevel.Debug()
+                .MinimumLevel.Override("Orleans", LogEventLevel.Warning)
+                .MinimumLevel.Override("System.Net", LogEventLevel.Warning)
+                .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
+                .CreateLogger();
+
+            Log.Information("Running in environment {Environment}", builder.Environment.EnvironmentName);
+            builder.Host.UseOrleansPoc(config);
+            builder.Host.UseSerilog();
+
+            WebApplication app = builder.Build();
+            app.Map("/dashboard", x => x.UseOrleansDashboard());
+
+            app.Map("/pub", SampleEndpoints.StartPublisherAsync);
+            app.Map("/sub/{numOfSubs:int}", SampleEndpoints.StartSubscribersAsync);
+
+            Log.Information("Starting Host");
+            app.Run();
+            Log.Information("Host terminated successfully");
+        } catch (Exception e) {
+            Console.Error.WriteLine(e);
+            Log.Fatal(e, "Host terminated unexpectedly");
+        } finally {
+            Log.CloseAndFlush();
+        }
+    }
+}
