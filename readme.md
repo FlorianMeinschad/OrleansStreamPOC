@@ -22,7 +22,76 @@ Urls:
 6. Check the log for Silo1. All subscribers will have stopped, and no further messages will be received from the publisher
 
 -----------------------------------------------------------------------------------------------------------------
-Sometimes the following exceptions are thrown:
+Logs of Silo2:
+```
+[13:36:18 INF] Running in environment Development
+[13:36:18 INF] Using Orleans Silo Port 20000
+[13:36:18 INF] Using Orleans Silo GW 40000
+[13:36:18 INF] Use orleans localhost clustering
+[13:36:19 INF] Starting Host
+[13:36:19 WRN] Note: Silo not running with ServerGC turned on - recommend checking app config : <configuration>-<runtime>-<gcServer enabled="true">
+[13:36:19 WRN] Note: ServerGC only kicks in on multi-core systems (settings enabling ServerGC have no effect on single-core machines).
+[13:36:20 INF] Starting OrleansDashboard.SiloGrainService grain service on: S127.0.0.1:20000:83417778 x4F1BA0D3, with range <MultiRange: Size=x800B15E6, %Ring=50,017%>
+[13:36:20 INF] My range changed from <(0 0], Size=x100000000, %Ring=100%> to <MultiRange: Size=x800B15E6, %Ring=50,017%> increased = True
+[13:36:21 INF] Subscriber started successfully on Sile S127.0.0.1:20000:83417778
+[13:36:21 INF] Subscriber started successfully on Sile S127.0.0.1:20000:83417778
+[13:36:21 INF] Subscriber started successfully on Sile S127.0.0.1:20000:83417778
+[13:36:24 INF] Subscriber Grain f7dbf895ee1345f8b3893e77c74375ae on Silo S127.0.0.1:20000:83417778 received publication Message sent from publisher
+[13:36:24 INF] Subscriber Grain 8d8879bdae8d450a9ff87f26e2ad69b0 on Silo S127.0.0.1:20000:83417778 received publication Message sent from publisher
+[13:36:24 INF] Subscriber Grain 05d60f264237439fb321ea7f2139743c on Silo S127.0.0.1:20000:83417778 received publication Message sent from publisher
+[13:36:29 INF] Subscriber Grain 8d8879bdae8d450a9ff87f26e2ad69b0 on Silo S127.0.0.1:20000:83417778 received publication Message sent from publisher
+[13:36:29 INF] Subscriber Grain 05d60f264237439fb321ea7f2139743c on Silo S127.0.0.1:20000:83417778 received publication Message sent from publisher
+[13:36:29 INF] Subscriber Grain f7dbf895ee1345f8b3893e77c74375ae on Silo S127.0.0.1:20000:83417778 received publication Message sent from publisher
+[13:36:38 INF] Stopping OrleansDashboard.SiloGrainService grain service
+[13:36:38 INF] Subscriber stopped successfully
+[13:36:38 INF] Subscriber stopped successfully
+[13:36:38 INF] Subscriber stopped successfully
+[13:36:41 INF] Host terminated successfully
+```
+
+Logs of Silo1 (no more publisher messages are received):
+```
+Sometimes there are also following exceptions thrown:
+[13:36:02 INF] Using Orleans Silo Port 11111
+[13:36:02 INF] Using Orleans Silo GW 30000
+[13:36:02 INF] Use orleans localhost clustering
+[13:36:03 INF] Starting Host
+[13:36:03 WRN] Note: Silo not running with ServerGC turned on - recommend checking app config : <configuration>-<runtime>-<gcServer enabled="true">
+[13:36:03 WRN] Note: ServerGC only kicks in on multi-core systems (settings enabling ServerGC have no effect on single-core machines).
+[13:36:04 INF] Starting OrleansDashboard.SiloGrainService grain service on: S127.0.0.1:11111:83417762 x9341EC4D, with range <(0 0], Size=x100000000, %Ring=100%>
+[13:36:04 INF] My range changed from <(0 0], Size=x100000000, %Ring=100%> to <(0 0], Size=x100000000, %Ring=100%> increased = True
+[13:36:07 INF] Starting publisher grain
+[13:36:07 INF] Publisher started successfully on Sile S127.0.0.1:11111:83417762
+[13:36:07 INF] Publisher grain started with Id 00000000-0000-0000-0000-000000000000
+[13:36:09 INF] Starting subscriber grains
+[13:36:10 INF] Subscriber started successfully on Sile S127.0.0.1:11111:83417762
+[13:36:10 INF] Subscriber started successfully on Sile S127.0.0.1:11111:83417762
+[13:36:10 INF] Subscriber started successfully on Sile S127.0.0.1:11111:83417762
+[13:36:10 INF] 3 subscriber grains started
+[13:36:14 INF] Subscriber Grain e3ccfd0618bc4383a7a7c2eab4c0d5cd on Silo S127.0.0.1:11111:83417762 received publication Message sent from publisher
+[13:36:14 INF] Subscriber Grain e7c9aca209eb481daf0689a3940a7778 on Silo S127.0.0.1:11111:83417762 received publication Message sent from publisher
+[13:36:14 INF] Subscriber Grain c46a7d1b239345b5a77da236fbc35070 on Silo S127.0.0.1:11111:83417762 received publication Message sent from publisher
+[13:36:19 INF] Subscriber Grain e7c9aca209eb481daf0689a3940a7778 on Silo S127.0.0.1:11111:83417762 received publication Message sent from publisher
+[13:36:19 INF] Subscriber Grain e3ccfd0618bc4383a7a7c2eab4c0d5cd on Silo S127.0.0.1:11111:83417762 received publication Message sent from publisher
+[13:36:19 INF] Subscriber Grain c46a7d1b239345b5a77da236fbc35070 on Silo S127.0.0.1:11111:83417762 received publication Message sent from publisher
+[13:36:19 INF] My range changed from <(0 0], Size=x100000000, %Ring=100%> to <MultiRange: Size=x7FF4EA1A, %Ring=49,983%> increased = True
+[13:36:21 INF] Starting subscriber grains
+[13:36:21 INF] 3 subscriber grains started
+[13:36:24 DBG] Error during subscribing to publisher Grain
+[13:36:24 DBG] Error during subscribing to publisher Grain
+[13:36:24 DBG] Error during subscribing to publisher Grain
+[13:36:24 INF] Subscriber Grain c46a7d1b239345b5a77da236fbc35070 on Silo S127.0.0.1:11111:83417762 received publication Message sent from publisher
+[13:36:24 INF] Subscriber Grain e7c9aca209eb481daf0689a3940a7778 on Silo S127.0.0.1:11111:83417762 received publication Message sent from publisher
+[13:36:24 INF] Subscriber Grain e3ccfd0618bc4383a7a7c2eab4c0d5cd on Silo S127.0.0.1:11111:83417762 received publication Message sent from publisher
+[13:36:29 INF] Subscriber Grain e3ccfd0618bc4383a7a7c2eab4c0d5cd on Silo S127.0.0.1:11111:83417762 received publication Message sent from publisher
+[13:36:29 INF] Subscriber Grain e7c9aca209eb481daf0689a3940a7778 on Silo S127.0.0.1:11111:83417762 received publication Message sent from publisher
+[13:36:29 INF] Subscriber Grain c46a7d1b239345b5a77da236fbc35070 on Silo S127.0.0.1:11111:83417762 received publication Message sent from publisher
+[13:36:38 INF] My range changed from <MultiRange: Size=x7FF4EA1A, %Ring=49,983%> to <(0 0], Size=x100000000, %Ring=100%> increased = True
+[13:36:38 INF] Subscriber stopped successfully
+```
+
+-----------------------------------------------------------------------------------------------------------------
+### Sometimes the following exceptions are thrown:
 
 Logs of Silo2
 ```
