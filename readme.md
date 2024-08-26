@@ -1,7 +1,7 @@
 ## POC: Orleans Streams Failing After Silo Crash
 
-This proof of concept (POC) demonstrates an issue where Orleans streams stop functioning after one of the silos crashes or shuts down. 
-Although the other silo remains running, it no longer receives messages from the publisher.
+This proof of concept (POC) demonstrates an issue where Orleans streams cease functioning after one of the silos crashes or shuts down. 
+Although the remaining silo continues to run, it no longer receives messages from the publisher.
 
 Urls:
  - Dashboard: http://localhost:5000/dashboard
@@ -10,19 +10,19 @@ Urls:
 
 ### POC steps (try multiple times, unfortunately not working always):
 
-1. Start Silo1 and call the following URLs: <br> 
+1. **Start Silo1** and execute the following URLs: <br> 
    http://localhost:5000/pub/5 <br> 
    http://localhost:5000/sub/3
-2. Start Silo2 and call the following URL: <br>
+2. **Start Silo2** and execute the following URL: <br>
    http://localhost:5000/sub/3
-3. You can also check the dashboard to confirm that grains are hosted on both silos <br>
+3. **Optional** Use the dashboard to verify that grains are hosted on both silos <br>
    http://localhost:5000/dashboard 
-4. Review the logs for both Silo1 and Silo2. Each silo should receive messages from the publisher every 5 seconds
-5. Terminate Silo2 (press Ctrl+C in the console multiple times)
-6. Check the log for Silo1. All subscribers will have stopped, and no further messages will be received from the publisher
+4. **Monitor the logs** for both Silo1 and Silo2. You should see that both silos are receiving messages from the publisher every 5 seconds.
+5. **Stop Silo2** by pressing CTRL+C in its console
+6. **Check the log for Silo1**. You will observe that all subscribers have stopped, and Silo1 no longer receives messages from the publisher.
 
 -----------------------------------------------------------------------------------------------------------------
-Logs of Silo2:
+Log of Silo2:
 ```
 [13:36:18 INF] Running in environment Development
 [13:36:18 INF] Using Orleans Silo Port 20000
@@ -49,7 +49,7 @@ Logs of Silo2:
 [13:36:41 INF] Host terminated successfully
 ```
 
-Logs of Silo1 (no more publisher messages are received):
+Log of Silo1 (no more publisher messages are received):
 ```
 Sometimes there are also following exceptions thrown:
 [13:36:02 INF] Using Orleans Silo Port 11111
@@ -91,9 +91,10 @@ Sometimes there are also following exceptions thrown:
 ```
 
 -----------------------------------------------------------------------------------------------------------------
+
 ### Sometimes the following exceptions are thrown:
 
-Logs of Silo2
+Log of Silo2
 ```
 [13:16:22 INF] Subscriber Grain 791e0ed160214841ad5d8792d290bc19 on Silo S127.0.0.1:20000:83416570 received publication Message sent from publisher
 [13:16:28 INF] Stopping OrleansDashboard.SiloGrainService grain service
@@ -111,7 +112,7 @@ Orleans.Runtime.OrleansMessageRejectionException: Forwarding failed: tried to fo
 [13:16:30 INF] Host terminated successfully
 ```
 
-Logs of Silo1
+Log of Silo1
 ```
 [13:16:17 INF] Subscriber Grain 4a1dafd47e4940d28b1b695d3f7a4e8c on Silo S127.0.0.1:11111:83416554 received publication Message sent from publisher
 [13:16:22 INF] Subscriber Grain 4a1dafd47e4940d28b1b695d3f7a4e8c on Silo S127.0.0.1:11111:83416554 received publication Message sent from publisher

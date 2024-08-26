@@ -6,13 +6,13 @@ namespace OrleansPOC.Grains.Subscriber;
 public class SubscriberGrain : Grain, ISubscriberGrain
 {
     private StreamSubscriptionHandle<string>? StreamSubscriptionHandle { get; set; }
-    private IStreamProvider _streamProvider;
-    private IGrainRuntime _grainRuntime;
-    private ILogger<SubscriberGrain> _logger;
+    private readonly IStreamProvider _streamProvider;
+    private readonly IGrainRuntime _grainRuntime;
+    private readonly ILogger<SubscriberGrain> _logger;
 
     public SubscriberGrain(IClusterClient clusterClient, IGrainRuntime grainRuntime, ILogger<SubscriberGrain> logger)
     {
-        _streamProvider = clusterClient.GetStreamProvider(ArtisStreamProviderIds.STREAM);
+        _streamProvider = clusterClient.GetStreamProvider(StreamProviderIds.STREAM);
         _grainRuntime = grainRuntime;
         _logger = logger;
     }
@@ -50,7 +50,7 @@ public class SubscriberGrain : Grain, ISubscriberGrain
     }
 
     private Task OnUpdateSuccessAsync(string publication) {
-        _logger.LogInformation("Subscriber Grain {GrainId} on Silo {Silo} received publication {Publication}", this.GetPrimaryKeyString(), _grainRuntime.SiloAddress, publication);
+        _logger.LogInformation("Subscriber Grain {GrainId} on Silo {Silo} received publication: {Publication}", this.GetPrimaryKeyString(), _grainRuntime.SiloAddress, publication);
         return Task.CompletedTask;
     }
 

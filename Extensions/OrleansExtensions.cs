@@ -30,7 +30,7 @@ internal static class OrleansExtensions
             Log.Information("Use orleans localhost clustering");
             silo.UseLocalhostClustering(config.SiloPort, config.SiloGateway, new IPEndPoint(IPAddress.Loopback, config.PrimarySiloPort), ServiceId, ClusterId);
 
-            silo.AddMemoryStreams(ArtisStreamProviderIds.STREAM);
+            silo.AddMemoryStreams(StreamProviderIds.STREAM);
             silo.AddMemoryGrainStorage(OrleansConstants.InMemoryStorage);
             silo.AddMemoryGrainStorage(OrleansConstants.PubSubStore);
         });

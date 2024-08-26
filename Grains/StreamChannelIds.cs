@@ -1,6 +1,6 @@
 namespace OrleansPOC.Grains;
 
-public class StreamChannelIds
+public static class StreamChannelIds
 {
     public const string STREAM_ID = "STREAM";
 }

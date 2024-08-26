@@ -8,7 +8,7 @@ using Serilog.Events;
 
 namespace OrleansPOC;
 
-public static class Silo
+public static class SiloHelper
 {
     public static void Startup(SiloConfig config)
     {
