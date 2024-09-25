@@ -3,8 +3,8 @@ using Microsoft.Extensions.Logging;
 using Orleans;
 using Orleans.Runtime;
 using Streams.Extensions;
-using Streams.Grains.ClusterSiloStreamProvider;
-using Streams.Grains.LocalSiloStreamProvider;
+using Streams.Grains.ClusterPubSub;
+using Streams.Grains.LocalPubSub;
 
 namespace Streams;
 
@@ -12,29 +12,29 @@ public class StreamHandlingBackgroundService : BackgroundService
 {
     private readonly IGrainFactory _grainFactory;
     private readonly ILocalSiloDetails _localSiloDetails;
-    private readonly LocalStreamProviderGrain _locationBroadcaster;
+    private readonly LocalPubSubGrain _locationBroadcaster;
     private ILogger<StreamHandlingBackgroundService> _logger;
 
     public StreamHandlingBackgroundService(ILocalSiloDetails localSiloDetails, IGrainFactory grainFactory, ILogger<StreamHandlingBackgroundService> logger)
     {
         _grainFactory = grainFactory;
         _localSiloDetails = localSiloDetails;
-        _locationBroadcaster = new LocalStreamProviderGrain();
+        _locationBroadcaster = new LocalPubSubGrain();
         _logger = logger;
     }
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
-        IClusterStreamProviderGrain clusterStreamProvider = _grainFactory.GetSingletonGrain<IClusterStreamProviderGrain>();
+        IClusterPubSubGrain clusterPubSub = _grainFactory.GetSingletonGrain<IClusterPubSubGrain>();
         SiloAddress localSiloAddress = _localSiloDetails.SiloAddress;
-        ILocalStreamProviderGrain selfReference =
-            _grainFactory.CreateObjectReference<ILocalStreamProviderGrain>(_locationBroadcaster);
+        ILocalPubSubGrain selfReference =
+            _grainFactory.CreateObjectReference<ILocalPubSubGrain>(_locationBroadcaster);
 
         while (!stoppingToken.IsCancellationRequested)
         {
             try
             {
-                await clusterStreamProvider.AddStreamProviderAsync(localSiloAddress, selfReference);
+                await clusterPubSub.AddSiloAsync(localSiloAddress, selfReference);
             }
             catch (Exception exception)
             {
