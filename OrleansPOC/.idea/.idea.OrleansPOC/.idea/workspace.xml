@@ -7,12 +7,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44fa56d7-a8f6-4df1-8508-4ec44dbb931b" name="Changes" comment="simple working implementation (not fully solved)">
+    <list default="true" id="44fa56d7-a8f6-4df1-8508-4ec44dbb931b" name="Changes" comment="refactoring">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OrleansPOC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OrleansPOC/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grains/Publisher/PublisherGrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Grains/Publisher/PublisherGrain.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grains/StreamChannelIds.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Grains/StreamChannelIds.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grains/Subscriber/SubscriberGrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Grains/Subscriber/SubscriberGrain.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Streams/Streams/Grains/ClusterPubSub/ClusterPubSubSingletonGrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Grains/ClusterPubSub/ClusterPubSubSingletonGrain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Streams/Streams/Grains/LocalPubSub/LocalPubSubGrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Grains/LocalPubSub/LocalPubSubGrain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Streams/Streams/StreamHandlingBackgroundService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/StreamHandlingBackgroundService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +91,7 @@
   "keyToString": {
     ".NET Project.OrleansPOC.executor": "Run",
     ".NET Project.Silo1.executor": "Debug",
-    ".NET Project.Silo2.executor": "Debug",
+    ".NET Project.Silo2.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "feature/custom-streams",
     "ignore.virus.scanning.warn.message": "true",
@@ -233,7 +232,7 @@
       <workItem from="1727172466076" duration="1954000" />
       <workItem from="1727240925921" duration="25106000" />
       <workItem from="1727333188600" duration="7746000" />
-      <workItem from="1727413915921" duration="13673000" />
+      <workItem from="1727413915921" duration="14518000" />
     </task>
     <task id="LOCAL-00001" summary="initial setup">
       <option name="closed" value="true" />
@@ -299,7 +298,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727426147916</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="refactoring">
+      <option name="closed" value="true" />
+      <created>1727427902501</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1727427902501</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,7 +323,8 @@
     <MESSAGE value="initial setup" />
     <MESSAGE value="initial custom streaming implementation" />
     <MESSAGE value="simple working implementation (not fully solved)" />
-    <option name="LAST_COMMIT_MESSAGE" value="simple working implementation (not fully solved)" />
+    <MESSAGE value="refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -326,13 +334,26 @@
           <line>52</line>
           <properties documentPath="D:\OrleansPOC\Streams\Streams\Grains\ClusterPubSub\ClusterPubSubSingletonGrain.cs" containingFunctionPresentation="Method 'PublishAsync'">
             <startOffsets>
-              <option value="1799" />
+              <option value="1834" />
             </startOffsets>
             <endOffsets>
-              <option value="1861" />
+              <option value="1896" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/../Streams/Streams/Grains/ClusterPubSub/ClusterPubSubSingletonGrain.cs</url>
+          <line>48</line>
+          <properties documentPath="D:\OrleansPOC\Streams\Streams\Grains\ClusterPubSub\ClusterPubSubSingletonGrain.cs" containingFunctionPresentation="Method 'PublishAsync'">
+            <startOffsets>
+              <option value="1702" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1757" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

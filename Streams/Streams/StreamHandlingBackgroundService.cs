@@ -19,7 +19,7 @@ public class StreamHandlingBackgroundService(
     ILogger<StreamHandlingBackgroundService> logger)
     : BackgroundService
 {
-    private readonly LocalPubSubGrain _locationBroadcaster = new(localMessageBus);
+    private readonly LocalPubSubGrain _locationBroadcaster = new(logger, localMessageBus, localSiloDetails);
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {

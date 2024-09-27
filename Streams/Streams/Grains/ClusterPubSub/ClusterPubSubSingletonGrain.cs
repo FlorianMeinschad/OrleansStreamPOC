@@ -7,7 +7,7 @@ using Streams.Grains.LocalPubSub;
 
 namespace Streams.Grains.ClusterPubSub;
 
-public class ClusterPubSubSingletonGrain(ILogger<ClusterPubSubSingletonGrain> logger) : IClusterPubSubGrain
+public class ClusterPubSubSingletonGrain(ILogger<ClusterPubSubSingletonGrain> logger, IGrainRuntime grainRuntime) : Grain, IClusterPubSubGrain
 {
     private readonly ConcurrentDictionary<string, ILocalPubSubGrain> _subscribers = new(StringComparer.OrdinalIgnoreCase);
     private readonly ConcurrentDictionary<string, int> _subscriberErrorCount = new(StringComparer.OrdinalIgnoreCase);
@@ -67,4 +67,26 @@ public class ClusterPubSubSingletonGrain(ILogger<ClusterPubSubSingletonGrain> lo
             _subscriberErrorCount.TryRemove(key, out _);
         }
     }
+
+    public override Task OnActivateAsync(CancellationToken cancellationToken)
+    {
+        logger.LogInformation("ClusterPubSubSingletonGrain activated on silo {Silo}", grainRuntime.SiloAddress);
+        return Task.CompletedTask;
+    }
+
+    public override Task OnDeactivateAsync(DeactivationReason reason, CancellationToken cancellationToken)
+    {
+        logger.LogWarning("ClusterPubSubSingletonGrain deactivated on silo {Silo}", grainRuntime.SiloAddress);
+        return Task.CompletedTask;
+    }
 }
+
+/*
+11:18:05 WRN] ClusterPubSubSingletonGrain deactivated on silo S127.0.0.1:11111:86433447
+[11:18:05 INF] Subscriber stopped successfully on silo S127.0.0.1:11111:86433447
+[11:18:05 INF] Subscriber stopped successfully on silo S127.0.0.1:11111:86433447
+[11:18:05 INF] Subscriber stopped successfully on silo S127.0.0.1:11111:86433447
+[11:18:05 INF] Subscriber stopped successfully on silo S127.0.0.1:11111:86433447
+[11:18:10 INF] ClusterPubSubSingletonGrain activated on silo S127.0.0.1:11111:86433447
+[11:18:10 INF] Add LocalPubSubGrain sys.client/hosted-127.0.0.1:11111@86433447+74657bd846fa41e2a7f4ad92a0313b6d to silo S127.0.0.1:11111:86433447
+*/
