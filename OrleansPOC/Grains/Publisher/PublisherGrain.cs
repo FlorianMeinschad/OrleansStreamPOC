@@ -1,31 +1,21 @@
 using Microsoft.Extensions.Logging;
-using Orleans.Streams;
-using Orleans.Streams.Core;
 using Streams.Streaming;
 using Streams.Streaming.Interfaces;
 
 namespace OrleansPOC.Grains.Publisher;
 
-public class PublisherGrain : Grain, IPublisherGrain
+public class PublisherGrain(ILogger<PublisherGrain> logger, IClusterClient client, IGrainRuntime grainRuntime)
+    : Grain, IPublisherGrain
 {
     private IArtisAsyncStream<string> _stream = null!;
-    private readonly IArtisStreamProvider _streamProvider;
-    private readonly ILogger<PublisherGrain> _logger;
-    private readonly IGrainRuntime _grainRuntime;
-
-    public PublisherGrain(ILogger<PublisherGrain> logger, IClusterClient client, IGrainRuntime grainRuntime)
-    {
-        _streamProvider = client.GetArtisStreamProvider(StreamProviderIds.STREAM);
-        _logger = logger;
-        _grainRuntime = grainRuntime;
-    }
+    private readonly IArtisStreamProvider _streamProvider = client.GetArtisStreamProvider(StreamProviderIds.STREAM);
 
     public Task StartAsync(TimeSpan interval)
     {
-        _stream = _streamProvider.GetStream<string>(StreamChannelIds.STREAM_ID);
-        _logger.LogInformation("Publisher started successfully on Silo {Silo}", _grainRuntime.SiloAddress);
+        _stream = _streamProvider.GetStream<string>(StreamChannelIds.TEST_STREAM_ID);
+        logger.LogInformation("Publisher started successfully on silo {Silo}", grainRuntime.SiloAddress);
 
-        this.RegisterGrainTimer<object>(_ => _stream.PublishAsync("Message sent from publisher"), null, TimeSpan.FromSeconds(1), interval);
+        this.RegisterGrainTimer<object>(_ => _stream.PublishAsync("Publisher says hello"), null, TimeSpan.FromSeconds(1), interval);
         return Task.CompletedTask;
     }
 

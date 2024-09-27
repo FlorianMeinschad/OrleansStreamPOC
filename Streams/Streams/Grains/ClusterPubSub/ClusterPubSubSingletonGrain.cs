@@ -50,8 +50,10 @@ public class ClusterPubSubSingletonGrain(ILogger<ClusterPubSubSingletonGrain> lo
             }
             catch (Exception e)
             {
-                _subscriberErrorCount[subscriber.Key]++;
-                if (_subscriberErrorCount[subscriber.Key] >= 3)
+                var entry = _subscriberErrorCount.GetOrAdd(subscriber.Key, 0);
+                entry += 1;
+
+                if (entry >= 3)
                 {
                     subscribersToRemove.Add(subscriber.Key);
                 }

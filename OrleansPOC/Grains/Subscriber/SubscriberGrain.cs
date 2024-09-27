@@ -17,7 +17,7 @@ public class SubscriberGrain : Grain, ISubscriberGrain
     public SubscriberGrain(IClusterClient clusterClient, IGrainRuntime grainRuntime, ILogger<SubscriberGrain> logger)
     {
         var streamProvider = clusterClient.GetArtisStreamProvider(StreamProviderIds.STREAM);
-        _stream = streamProvider.GetStream<string>(StreamChannelIds.STREAM_ID);
+        _stream = streamProvider.GetStream<string>(StreamChannelIds.TEST_STREAM_ID);
         _grainRuntime = grainRuntime;
         _logger = logger;
     }
@@ -36,13 +36,13 @@ public class SubscriberGrain : Grain, ISubscriberGrain
     public override async Task OnActivateAsync(CancellationToken cancellationToken)
     {
         await _stream.SubscribeAsync(OnReceiveMessageAsync);
-        _logger.LogInformation("Subscriber started successfully on Sile {Silo}", _grainRuntime.SiloAddress);
+        _logger.LogInformation("Subscriber started successfully on silo {Silo}", _grainRuntime.SiloAddress);
         await base.OnActivateAsync(cancellationToken);
     }
 
     private Task OnReceiveMessageAsync(string message)
     {
-        Console.WriteLine(Guid.NewGuid().ToString().Substring(0, 4) + ": " + message);
+        Console.WriteLine($"Subscriber received message on silo: {_grainRuntime.SiloAddress}: {Guid.NewGuid().ToString().Substring(0, 4)} - {message}");
         return Task.CompletedTask;
     }
 
@@ -53,25 +53,7 @@ public class SubscriberGrain : Grain, ISubscriberGrain
             StreamSubscriptionHandle = null;
         }
 
-        _logger.LogInformation("Subscriber stopped successfully");
+        _logger.LogInformation("Subscriber stopped successfully on silo {Silo}", _grainRuntime.SiloAddress);
         await base.OnDeactivateAsync(reason, cancellationToken);
-    }
-
-    public Task OnNextAsync(string item, StreamSequenceToken? token = null)
-    {
-        _logger.LogInformation("Subscriber Grain {GrainId} on Silo {Silo} received publication: {Publication}", this.GetPrimaryKeyString(), _grainRuntime.SiloAddress, item);
-        return Task.CompletedTask;
-    }
-
-    public Task OnCompletedAsync()
-    {
-        _logger.LogInformation("Publisher stopped successfully");
-        return Task.CompletedTask;
-    }
-
-    public Task OnErrorAsync(Exception ex)
-    {
-        _logger.LogDebug("Error during subscribing to publisher Grain");
-        return Task.CompletedTask;
     }
 }

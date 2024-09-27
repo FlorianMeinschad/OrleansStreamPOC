@@ -7,29 +7,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44fa56d7-a8f6-4df1-8508-4ec44dbb931b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Grains/Publisher/PublisherGrainOld.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grains/Subscriber/SubscriberGrain_OLD.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Streams/Streams/Streaming/LocalMessageBus.cs" afterDir="false" />
+    <list default="true" id="44fa56d7-a8f6-4df1-8508-4ec44dbb931b" name="Changes" comment="simple working implementation (not fully solved)">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OrleansPOC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OrleansPOC/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Extensions/OrleansExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Extensions/OrleansExtensions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Grains/Publisher/PublisherGrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Grains/Publisher/PublisherGrain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grains/StreamChannelIds.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Grains/StreamChannelIds.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Grains/Subscriber/SubscriberGrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Grains/Subscriber/SubscriberGrain.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrleansPOC.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/OrleansPOC.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrleansPOC.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/OrleansPOC.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SiloHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SiloHelper.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Streams/Streams/Grains/ClusterPubSub/ClusterPubSubSingletonGrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Grains/ClusterPubSub/ClusterPubSubSingletonGrain.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Streams/Streams/Grains/ClusterPubSub/IClusterPubSubGrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Grains/ClusterPubSub/IClusterPubSubGrain.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Streams/Streams/Grains/LocalPubSub/ILocalPubSubGrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Grains/LocalPubSub/ILocalPubSubGrain.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Streams/Streams/Grains/LocalPubSub/LocalPubSubGrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Grains/LocalPubSub/LocalPubSubGrain.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Streams/Streams/StreamHandlingBackgroundService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/StreamHandlingBackgroundService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Streams/Streams/Streaming/ArtisStream.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Streaming/ArtisStream.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Streams/Streams/Streaming/ArtisStreamProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Streaming/ArtisStreamProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Streams/Streams/Streaming/Interfaces/IArtisAsyncStream.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Streaming/Interfaces/IArtisAsyncStream.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Streams/Streams/Streaming/Interfaces/IArtisStreamProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Streaming/Interfaces/IArtisStreamProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Streams/Streams/Streaming/Interfaces/ILocalMessageBus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Streaming/Interfaces/ILocalMessageBus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Streams/Streams/Streaming/StreamingExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Streaming/StreamingExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Streams/Streams/Streams.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Streams.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,8 +91,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     ".NET Project.OrleansPOC.executor": "Run",
-    ".NET Project.Silo1.executor": "Run",
-    ".NET Project.Silo2.executor": "Run",
+    ".NET Project.Silo1.executor": "Debug",
+    ".NET Project.Silo2.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "feature/custom-streams",
     "ignore.virus.scanning.warn.message": "true",
@@ -250,7 +233,7 @@
       <workItem from="1727172466076" duration="1954000" />
       <workItem from="1727240925921" duration="25106000" />
       <workItem from="1727333188600" duration="7746000" />
-      <workItem from="1727413915921" duration="12048000" />
+      <workItem from="1727413915921" duration="13673000" />
     </task>
     <task id="LOCAL-00001" summary="initial setup">
       <option name="closed" value="true" />
@@ -308,7 +291,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727273628210</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="simple working implementation (not fully solved)">
+      <option name="closed" value="true" />
+      <created>1727426147916</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1727426147916</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -324,36 +315,24 @@
     <MESSAGE value="cleanup and clarify" />
     <MESSAGE value="initial setup" />
     <MESSAGE value="initial custom streaming implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial custom streaming implementation" />
+    <MESSAGE value="simple working implementation (not fully solved)" />
+    <option name="LAST_COMMIT_MESSAGE" value="simple working implementation (not fully solved)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Grains/Publisher/PublisherGrain.cs</url>
-          <line>24</line>
-          <properties documentPath="D:\OrleansPOC\OrleansPOC\Grains\Publisher\PublisherGrain.cs" containingFunctionPresentation="Method 'StartAsync'">
-            <startOffsets>
-              <option value="792" />
-            </startOffsets>
-            <endOffsets>
-              <option value="864" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/../Streams/Streams/Grains/ClusterPubSub/ClusterPubSubSingletonGrain.cs</url>
-          <line>36</line>
+          <line>52</line>
           <properties documentPath="D:\OrleansPOC\Streams\Streams\Grains\ClusterPubSub\ClusterPubSubSingletonGrain.cs" containingFunctionPresentation="Method 'PublishAsync'">
             <startOffsets>
-              <option value="1354" />
+              <option value="1799" />
             </startOffsets>
             <endOffsets>
-              <option value="1378" />
+              <option value="1861" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="10" />
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
