@@ -8,42 +8,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44fa56d7-a8f6-4df1-8508-4ec44dbb931b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.OrleansPOC/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.OrleansPOC/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.OrleansPOC/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.OrleansPOC/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Config/SiloConfig.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Endpoints/IEndpointLogger.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Endpoints/SampleEndpoints.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Extensions/OrleansExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grains/Publisher/IPublisherGrain.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grains/Publisher/PublisherGrain.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grains/StreamChannelIds.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grains/StreamProviderIds.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grains/Subscriber/ISubscriberGrain.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grains/Subscriber/SubscriberGrain.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrleansPOC.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrleansPOC.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrleansPOC.sln.DotSettings.user" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SiloHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Streams/Streams/Exceptions/StreamException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Streams/Streams/Grains/ArtisPubSubGrain.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Streams/Streams/Grains/ClusterPubSub/ClusterPubSubSingletonGrain.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Streams/Streams/Grains/ClusterPubSub/IClusterPubSubGrain.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Streams/Streams/Streaming/ArtisStream.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Streams/Streams/Streaming/ArtisStreamProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Streams/Streams/Streaming/Interfaces/IArtisAsyncStream.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Streams/Streams/Streaming/Interfaces/IArtisStreamProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Streams/Streams/Streaming/Interfaces/ILocalMessageBus.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Streams/Streams/Streaming/StreamingExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Streams/Streams/Grains/ClusterSiloStreamProvider/ClusterStreamProviderGrain.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Streams/Streams/Grains/ClusterSiloStreamProvider/IClusterStreamProviderGrain.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Streams/Streams/Grains/LocalSiloStreamProvider/ILocalStreamProviderGrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Grains/LocalPubSub/ILocalPubSubGrain.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Streams/Streams/Grains/LocalSiloStreamProvider/LocalStreamProviderGrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Grains/LocalPubSub/LocalPubSubGrain.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Streams/Streams/Interfaces/IStreamObserver.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Streams/Streams/Interfaces/IStreamSubscriber.cs" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Grains/Publisher/PublisherGrainOld.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Grains/Subscriber/SubscriberGrain_OLD.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Streams/Streams/Streaming/LocalMessageBus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.OrleansPOC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OrleansPOC/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Extensions/OrleansExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Extensions/OrleansExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grains/Publisher/PublisherGrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Grains/Publisher/PublisherGrain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grains/Subscriber/SubscriberGrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Grains/Subscriber/SubscriberGrain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrleansPOC.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/OrleansPOC.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrleansPOC.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/OrleansPOC.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SiloHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SiloHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Streams/Streams/Grains/ClusterPubSub/ClusterPubSubSingletonGrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Grains/ClusterPubSub/ClusterPubSubSingletonGrain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Streams/Streams/Grains/ClusterPubSub/IClusterPubSubGrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Grains/ClusterPubSub/IClusterPubSubGrain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Streams/Streams/Grains/LocalPubSub/ILocalPubSubGrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Grains/LocalPubSub/ILocalPubSubGrain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Streams/Streams/Grains/LocalPubSub/LocalPubSubGrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Grains/LocalPubSub/LocalPubSubGrain.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Streams/Streams/StreamHandlingBackgroundService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/StreamHandlingBackgroundService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Streams/Streams/Streaming/ArtisStream.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Streaming/ArtisStream.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Streams/Streams/Streaming/ArtisStreamProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Streaming/ArtisStreamProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Streams/Streams/Streaming/Interfaces/IArtisAsyncStream.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Streaming/Interfaces/IArtisAsyncStream.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Streams/Streams/Streaming/Interfaces/IArtisStreamProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Streaming/Interfaces/IArtisStreamProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Streams/Streams/Streaming/Interfaces/ILocalMessageBus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Streaming/Interfaces/ILocalMessageBus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Streams/Streams/Streaming/StreamingExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Streaming/StreamingExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Streams/Streams/Streams.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Streams.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,17 +66,19 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/40306acd66d12e7fc761c6bdcbd33b6efd9d66352fe2eca8785ff11c9f7661/PersistentStreamProvider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/44c2e22851f4350d14e56bedbdc868699fcacce991a545a63107db7d34e837b/StreamConsumer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5820389e5ae68b9cd7addb79d023fb6af4a12e9221d52c44d860e141d092/SiloPersistentStreamConfigurator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5b9a17c0ab51745f72124666e114996cb69919c74afb3b8e9839f55da43b/IAsyncObserver.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5b9a17c0ab51745f72124666e114996cb69919c74afb3b8e9839f55da43b/IAsyncObserver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6d45c530695c3351da41c6e52924b56231b0116868a1ffbb8daaaa11711d3320/ServiceProviderKeyedServiceExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/78372b301ece321360cde6f72a14e6f78edd23baad83819934a86188794084/SiloBuilderMemoryStreamExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7b8f12ca368fcd87c70e8fbe9edb3987968ed94340c39cb3805bbe4e639ea/ImplicitStreamPubSub.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8212c07b8731d61d633036d0a35fddcf7fea743168f29757d2e7edc75ac461/IAsyncObservable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/88389d64c47af9d994ad443780f02d597a5d5b6d9cb53693c250a5ff1ce4a5/StreamConsumerExtension.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8ecf50c38230a751f4d85b03f66fd8bb9cb4574f6a2413058a7c244a21f34da/ClusterClientPersistentStreamConfigurator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/996fd67a8795234761cad5f77e08c126cdeba4a74607799eb5562f0a480f7/GrainStreamingExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9c3b308c2aabb33ceaeb129b1f61b2fa9f577255c7b331ac073b3d4ecf43da7/IStreamProviderRuntime.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a0cf7044f6bac0d040405ba1216529c1eea01ddb2faf194384a599981921b2/IAsyncStream.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b0b5ade6e9d751f525f3cd3f87bf2a76fe85b851449cae1377dd37fe5dd6f/IAsyncBatchProducer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b434b4afdca5863e885bdcd54a6b4b9bf8b8795e68fb38b0883f33f31c5be4/PersistentStreamProducer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b4afc5a24fd4ff173c56375152dbae6d4f574fe326751beff4e2ca520b94182/StreamSubscription.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c678d76fa48dc727aa2e25c12acabaf874c36a6add59b97f832f758c859d/GenericAsyncObserver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/cb9c736514d8a72bee3d93376c62d958c4381e1f518c032b1247cec1b1bee/IClusterClient.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/cfbb9421ee377e77a25138915e432c93a9ca36ade69eee5bfad24acce54190/IStreamSubscriptionObserver.cs" root0="SKIP_HIGHLIGHTING" />
@@ -98,10 +86,12 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d15cbc2feeed94b30aaf3f72778bcc3adebe12824c514373e243cca669d228/StreamSubscriptionHandleImpl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/da5402228c2c73c9dc7055e66a397b3f9c42edc437faf8030b4c3e4eddc8/IGrainObserver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/dcbbd1b57f8c1b6e6e1bf7565e231d97ec42a686bc47e477cc12e256ed08f/StreamImpl.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e1cf9d7bccc8bd7ecfb48959b61ebd67135d2dee350181261a5cebfb60ebd8/StreamId.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e1cf9d7bccc8bd7ecfb48959b61ebd67135d2dee350181261a5cebfb60ebd8/StreamId.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e2ab6adac8f7f8d6978505a1f5d698ce046c2218c7cbb29d29f9cf6e657e7/StreamSubscriptionHandle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e4e4285d6b88b327c7eeafbead6503fe1b08331beec3d3676ca4b974de5a82c/GrainInterfaceTypeToGrainTypeResolver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Endpoints/SampleEndpoints.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Silo1/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/OrleansPOC/Streams/Streams/Streaming/ArtisStream.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -131,7 +121,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Project.Silo1">
+  <component name="RunManager" selected=".NET Project.Silo2">
     <configuration name="Silo1" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/../Silo1/bin/Debug/net8.0/Silo1.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -159,6 +149,42 @@
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
       <option name="PROJECT_PATH" value="$PROJECT_DIR$/../Silo1/Silo1.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value="net8.0" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="Silo1" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../Silo1/bin/Debug/net8.0/Silo1.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Silo1/bin/Debug/net8.0" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/../Silo1/Silo1.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value="net8.0" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="Silo2" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../Silo2/bin/Debug/net8.0/Silo2.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Silo2/bin/Debug/net8.0" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/../Silo2/Silo2.csproj" />
       <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
@@ -222,7 +248,9 @@
       <workItem from="1726211919900" duration="9452000" />
       <workItem from="1726462788570" duration="2442000" />
       <workItem from="1727172466076" duration="1954000" />
-      <workItem from="1727240925921" duration="24687000" />
+      <workItem from="1727240925921" duration="25106000" />
+      <workItem from="1727333188600" duration="7746000" />
+      <workItem from="1727413915921" duration="12048000" />
     </task>
     <task id="LOCAL-00001" summary="initial setup">
       <option name="closed" value="true" />
@@ -272,7 +300,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726225121989</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="initial custom streaming implementation">
+      <option name="closed" value="true" />
+      <created>1727273628210</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1727273628210</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,6 +323,39 @@
     <MESSAGE value="update readme" />
     <MESSAGE value="cleanup and clarify" />
     <MESSAGE value="initial setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial setup" />
+    <MESSAGE value="initial custom streaming implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial custom streaming implementation" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Grains/Publisher/PublisherGrain.cs</url>
+          <line>24</line>
+          <properties documentPath="D:\OrleansPOC\OrleansPOC\Grains\Publisher\PublisherGrain.cs" containingFunctionPresentation="Method 'StartAsync'">
+            <startOffsets>
+              <option value="792" />
+            </startOffsets>
+            <endOffsets>
+              <option value="864" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/../Streams/Streams/Grains/ClusterPubSub/ClusterPubSubSingletonGrain.cs</url>
+          <line>36</line>
+          <properties documentPath="D:\OrleansPOC\Streams\Streams\Grains\ClusterPubSub\ClusterPubSubSingletonGrain.cs" containingFunctionPresentation="Method 'PublishAsync'">
+            <startOffsets>
+              <option value="1354" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1378" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

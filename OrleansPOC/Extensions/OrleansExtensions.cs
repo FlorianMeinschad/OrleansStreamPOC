@@ -9,7 +9,6 @@ namespace OrleansPOC.Extensions;
 public static class OrleansConstants
 {
     public const string InMemoryStorage = "InMemoryStore";
-    public const string PubSubStore = "PubSubStore";
 }
 
 internal static class OrleansExtensions
@@ -31,9 +30,9 @@ internal static class OrleansExtensions
             silo.UseLocalhostClustering(config.SiloPort, config.SiloGateway, new IPEndPoint(IPAddress.Loopback, config.PrimarySiloPort), ServiceId, ClusterId);
 
             silo.AddMemoryGrainStorage("PubSubStore");
-            silo.AddMemoryStreams(StreamProviderIds.STREAM);
+            // silo.AddMemoryStreams(StreamProviderIds.STREAM);
             silo.AddMemoryGrainStorage(OrleansConstants.InMemoryStorage);
-            silo.AddMemoryGrainStorage(OrleansConstants.PubSubStore);
+            // silo.AddMemoryGrainStorage(OrleansConstants.PubSubStore);
         });
     }
 }

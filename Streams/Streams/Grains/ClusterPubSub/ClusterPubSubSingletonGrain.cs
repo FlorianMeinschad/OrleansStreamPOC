@@ -1,24 +1,30 @@
 using System.Collections.Concurrent;
 using Microsoft.Extensions.Logging;
+using Orleans;
 using Orleans.Runtime;
+using Orleans.Streams;
 using Streams.Grains.LocalPubSub;
 
 namespace Streams.Grains.ClusterPubSub;
 
-public class ClusterPubSubSingletonGrain(ILogger logger, ConcurrentDictionary<string, ILocalPubSubGrain> subscribers) : IClusterPubSubGrain
+public class ClusterPubSubSingletonGrain(ILogger<ClusterPubSubSingletonGrain> logger) : IClusterPubSubGrain
 {
+    private readonly ConcurrentDictionary<string, ILocalPubSubGrain> _subscribers = new(StringComparer.OrdinalIgnoreCase);
+    private readonly ConcurrentDictionary<string, int> _subscriberErrorCount = new(StringComparer.OrdinalIgnoreCase);
+
     public Task AddSiloAsync(SiloAddress siloAddress, ILocalPubSubGrain pubSub)
     {
-        if (subscribers.TryAdd(siloAddress.ToString(), pubSub))
+        if (_subscribers.TryAdd(siloAddress.ToString(), pubSub))
         {
-            logger.LogInformation("Add Silo to ");
+            logger.LogInformation("Add LocalPubSubGrain {LocalPubSubGrainId} to silo {SiloAddress}", pubSub.GetGrainId(), siloAddress);
         }
         return Task.CompletedTask;
     }
 
     public Task RemoveSiloAsync(SiloAddress siloAddress)
     {
-        if (!subscribers.TryRemove(siloAddress.ToString(), out _))
+        logger.LogInformation("Remove silo {SiloAddress} from subscribers", siloAddress);
+        if (!_subscribers.Remove(siloAddress.ToString(), out _))
         {
             logger.LogError($"Failed to remove silo {siloAddress.ToString()}");
         }
@@ -26,18 +32,37 @@ public class ClusterPubSubSingletonGrain(ILogger logger, ConcurrentDictionary<st
         return Task.CompletedTask;
     }
 
-    public Task PublishAsync(object message)
+    public async Task PublishAsync(string streamId, string message)
     {
-        if (!subscribers.Any())
+        if (!_subscribers.Any())
         {
-            return Task.CompletedTask;
+            return;
         }
 
-        var tasks = new List<Task>();
-        foreach (var subscriber in subscribers.Values)
+        var subscribersToRemove = new List<string>();
+
+        foreach (var subscriber in _subscribers)
         {
-            tasks.Add(subscriber.PublishAsync(message));
+            // error handling - what should happen if a silo is not reachable anymore?
+            try
+            {
+                await subscriber.Value.PublishAsync(streamId, message);
+            }
+            catch (Exception e)
+            {
+                _subscriberErrorCount[subscriber.Key]++;
+                if (_subscriberErrorCount[subscriber.Key] >= 3)
+                {
+                    subscribersToRemove.Add(subscriber.Key);
+                }
+            }
         }
-        return Task.WhenAll(tasks);
+
+        // cleanup not reachable subscribers
+        foreach (var key in subscribersToRemove)
+        {
+            _subscribers.TryRemove(key, out _);
+            _subscriberErrorCount.TryRemove(key, out _);
+        }
     }
 }

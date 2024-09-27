@@ -1,34 +1,31 @@
+using System.Collections.Concurrent;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Orleans;
+using Orleans.Concurrency;
 using Orleans.Runtime;
 using Streams.Extensions;
 using Streams.Grains.ClusterPubSub;
 using Streams.Grains.LocalPubSub;
+using Streams.Streaming.Interfaces;
 
 namespace Streams;
 
-public class StreamHandlingBackgroundService : BackgroundService
+[Reentrant]
+public class StreamHandlingBackgroundService(
+    ILocalSiloDetails localSiloDetails,
+    IGrainFactory grainFactory,
+    ILocalMessageBus localMessageBus,
+    ILogger<StreamHandlingBackgroundService> logger)
+    : BackgroundService
 {
-    private readonly IGrainFactory _grainFactory;
-    private readonly ILocalSiloDetails _localSiloDetails;
-    private readonly LocalPubSubGrain _locationBroadcaster;
-    private ILogger<StreamHandlingBackgroundService> _logger;
-
-    public StreamHandlingBackgroundService(ILocalSiloDetails localSiloDetails, IGrainFactory grainFactory, ILogger<StreamHandlingBackgroundService> logger)
-    {
-        _grainFactory = grainFactory;
-        _localSiloDetails = localSiloDetails;
-        _locationBroadcaster = new LocalPubSubGrain();
-        _logger = logger;
-    }
+    private readonly LocalPubSubGrain _locationBroadcaster = new(localMessageBus);
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
-        IClusterPubSubGrain clusterPubSub = _grainFactory.GetSingletonGrain<IClusterPubSubGrain>();
-        SiloAddress localSiloAddress = _localSiloDetails.SiloAddress;
-        ILocalPubSubGrain selfReference =
-            _grainFactory.CreateObjectReference<ILocalPubSubGrain>(_locationBroadcaster);
+        var clusterPubSub = grainFactory.GetSingletonGrain<IClusterPubSubGrain>();
+        var localSiloAddress = localSiloDetails.SiloAddress;
+        var selfReference = grainFactory.CreateObjectReference<ILocalPubSubGrain>(_locationBroadcaster);
 
         while (!stoppingToken.IsCancellationRequested)
         {
@@ -38,7 +35,7 @@ public class StreamHandlingBackgroundService : BackgroundService
             }
             catch (Exception exception)
             {
-                _logger.LogError(exception, "Error polling stream provider hub list");
+                logger.LogError(exception, "Error polling stream provider hub list");
             }
 
             if (!stoppingToken.IsCancellationRequested) {

@@ -8,5 +8,5 @@ public interface IClusterPubSubGrain : IGrainWithSingletonKey
 {
     Task AddSiloAsync(SiloAddress siloAddress, ILocalPubSubGrain pubSub);
     Task RemoveSiloAsync(SiloAddress siloAddress);
-    Task PublishAsync(object message);
+    Task PublishAsync(string streamId, string message);
 }

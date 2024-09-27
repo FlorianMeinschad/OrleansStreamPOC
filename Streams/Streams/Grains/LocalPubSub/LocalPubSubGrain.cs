@@ -1,9 +1,11 @@
+using Streams.Streaming.Interfaces;
+
 namespace Streams.Grains.LocalPubSub;
 
-public class LocalPubSubGrain : ILocalPubSubGrain
+public class LocalPubSubGrain(ILocalMessageBus messageBus) : ILocalPubSubGrain
 {
-    public Task PublishAsync(object message)
+    public Task PublishAsync(string streamId, string message)
     {
-        throw new NotImplementedException();
+        return messageBus.PublishAsync(streamId, message);
     }
 }

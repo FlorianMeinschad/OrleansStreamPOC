@@ -1,22 +1,23 @@
 using Microsoft.Extensions.Logging;
 using Orleans.Placement;
 using Orleans.Streams;
+using Serilog;
 using Streams.Streaming;
 using Streams.Streaming.Interfaces;
 
 namespace OrleansPOC.Grains.Subscriber;
-
-// [PreferLocalPlacement]
-public class SubscriberGrain : Grain, ISubscriberGrain
+/*
+[PreferLocalPlacement]
+public class SubscriberGrainOLD : Grain, ISubscriberGrain, IAsyncObserver<string>
 {
     private StreamSubscriptionHandle<string>? StreamSubscriptionHandle { get; set; }
-    private readonly IArtisAsyncStream<string> _stream;
+    private readonly IAsyncStream<string> _stream;
     private readonly IGrainRuntime _grainRuntime;
     private readonly ILogger<SubscriberGrain> _logger;
 
-    public SubscriberGrain(IClusterClient clusterClient, IGrainRuntime grainRuntime, ILogger<SubscriberGrain> logger)
+    public SubscriberGrainOLD(IClusterClient clusterClient, IGrainRuntime grainRuntime, ILogger<SubscriberGrain> logger)
     {
-        var streamProvider = clusterClient.GetArtisStreamProvider(StreamProviderIds.STREAM);
+        var streamProvider = clusterClient.GetStreamProvider(StreamProviderIds.STREAM);
         _stream = streamProvider.GetStream<string>(StreamChannelIds.STREAM_ID);
         _grainRuntime = grainRuntime;
         _logger = logger;
@@ -35,15 +36,53 @@ public class SubscriberGrain : Grain, ISubscriberGrain
 
     public override async Task OnActivateAsync(CancellationToken cancellationToken)
     {
-        await _stream.SubscribeAsync(OnReceiveMessageAsync);
+        try
+        {
+            await ResumeOrCreateSubscriptionAsync();
+        }
+        catch (Exception e)
+        {
+            _logger.LogCritical(e, "Error on resuming stream");
+            await CleanupStaleSubscriptions();
+            await CreateNewSubscription();
+        }
+
         _logger.LogInformation("Subscriber started successfully on Sile {Silo}", _grainRuntime.SiloAddress);
         await base.OnActivateAsync(cancellationToken);
     }
 
-    private Task OnReceiveMessageAsync(string message)
+    private async Task ResumeOrCreateSubscriptionAsync()
     {
-        Console.WriteLine(Guid.NewGuid().ToString().Substring(0, 4) + ": " + message);
-        return Task.CompletedTask;
+        if (StreamSubscriptionHandle is null)
+        {
+            _logger.LogInformation("Create subscription for subscriber {SubscriberId}", this.GetPrimaryKeyString());
+            StreamSubscriptionHandle = await _stream.SubscribeAsync(this);
+        }
+        else
+        {
+            _logger.LogInformation("Resume subscription {StreamId}, {HandleId}", StreamSubscriptionHandle.StreamId, StreamSubscriptionHandle.HandleId);
+            StreamSubscriptionHandle = await StreamSubscriptionHandle.ResumeAsync(this);
+        }
+    }
+
+    private async Task CleanupStaleSubscriptions()
+    {
+        var subscriptions = await _stream.GetAllSubscriptionHandles();
+        if (subscriptions.Count > 1)
+        {
+            _logger.LogCritical("More than one subscription handle is currently subscribed.");
+        }
+
+        foreach (var subscription in subscriptions)
+        {
+            _logger.LogWarning("Unsubscribe from subscription {StreamId}, {HandleId}", subscription.StreamId, subscription.HandleId);
+            await subscription.UnsubscribeAsync();
+        }
+    }
+
+    private async Task CreateNewSubscription()
+    {
+        StreamSubscriptionHandle = await _stream.SubscribeAsync(this);
     }
 
     public override async Task OnDeactivateAsync(DeactivationReason reason, CancellationToken cancellationToken)
@@ -75,3 +114,4 @@ public class SubscriberGrain : Grain, ISubscriberGrain
         return Task.CompletedTask;
     }
 }
+*/
