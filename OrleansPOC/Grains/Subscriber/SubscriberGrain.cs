@@ -53,7 +53,7 @@ public class SubscriberGrain : Grain, ISubscriberGrain
             StreamSubscriptionHandle = null;
         }
 
-        _logger.LogInformation("Subscriber stopped successfully on silo {Silo}", _grainRuntime.SiloAddress);
+        _logger.LogInformation("Subscriber stopped successfully on silo {Silo}, because of {@Reason}", _grainRuntime.SiloAddress, reason);
         await base.OnDeactivateAsync(reason, cancellationToken);
     }
 }

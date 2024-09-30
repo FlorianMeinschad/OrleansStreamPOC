@@ -7,11 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44fa56d7-a8f6-4df1-8508-4ec44dbb931b" name="Changes" comment="refactoring">
+    <list default="true" id="44fa56d7-a8f6-4df1-8508-4ec44dbb931b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OrleansPOC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OrleansPOC/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Streams/Streams/Grains/ClusterPubSub/ClusterPubSubSingletonGrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Grains/ClusterPubSub/ClusterPubSubSingletonGrain.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Streams/Streams/Grains/LocalPubSub/LocalPubSubGrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Grains/LocalPubSub/LocalPubSubGrain.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Streams/Streams/StreamHandlingBackgroundService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/StreamHandlingBackgroundService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grains/Subscriber/SubscriberGrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Grains/Subscriber/SubscriberGrain.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,22 +85,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.OrleansPOC.executor": "Run",
-    ".NET Project.Silo1.executor": "Debug",
-    ".NET Project.Silo2.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/custom-streams",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.OrleansPOC.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.Silo1.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.Silo2.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/custom-streams&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Project.Silo2">
     <configuration name="Silo1" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/../Silo1/bin/Debug/net8.0/Silo1.exe" />
@@ -232,7 +230,8 @@
       <workItem from="1727172466076" duration="1954000" />
       <workItem from="1727240925921" duration="25106000" />
       <workItem from="1727333188600" duration="7746000" />
-      <workItem from="1727413915921" duration="14518000" />
+      <workItem from="1727413915921" duration="15101000" />
+      <workItem from="1727672428608" duration="1847000" />
     </task>
     <task id="LOCAL-00001" summary="initial setup">
       <option name="closed" value="true" />
@@ -306,7 +305,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727427902501</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add some logging">
+      <option name="closed" value="true" />
+      <created>1727428753181</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1727428753181</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -324,38 +331,7 @@
     <MESSAGE value="initial custom streaming implementation" />
     <MESSAGE value="simple working implementation (not fully solved)" />
     <MESSAGE value="refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/../Streams/Streams/Grains/ClusterPubSub/ClusterPubSubSingletonGrain.cs</url>
-          <line>52</line>
-          <properties documentPath="D:\OrleansPOC\Streams\Streams\Grains\ClusterPubSub\ClusterPubSubSingletonGrain.cs" containingFunctionPresentation="Method 'PublishAsync'">
-            <startOffsets>
-              <option value="1834" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1896" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/../Streams/Streams/Grains/ClusterPubSub/ClusterPubSubSingletonGrain.cs</url>
-          <line>48</line>
-          <properties documentPath="D:\OrleansPOC\Streams\Streams\Grains\ClusterPubSub\ClusterPubSubSingletonGrain.cs" containingFunctionPresentation="Method 'PublishAsync'">
-            <startOffsets>
-              <option value="1702" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1757" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="add some logging" />
+    <option name="LAST_COMMIT_MESSAGE" value="add some logging" />
   </component>
 </project>
