@@ -6,6 +6,7 @@ using OrleansPOC.Grains;
 using OrleansPOC.Grains.Publisher;
 using OrleansPOC.Grains.Subscriber;
 using Orleans.Streams;
+using OrleansPOC.Grains.HealthCheck;
 
 namespace OrleansPOC.Endpoints;
 
@@ -44,5 +45,12 @@ public static class SampleEndpoints
         await stream.OnNextAsync("Message from endpoint: " + message);
         logger.LogInformation("Send single message from endpoint on silo {Silo}: {Message}", localSiloDetails.SiloAddress, message);
         return TypedResults.Ok("Message published successfully");
+    }
+
+    public static async Task<Ok<string>> StartHealthChecksAsync(IGrainFactory grainFactory)
+    {
+        var grain = grainFactory.GetGrain<IHealthCheckGrain>(Guid.Empty);
+        await grain.CheckAsync();
+        return TypedResults.Ok("Health check grain started successfully");
     }
 }

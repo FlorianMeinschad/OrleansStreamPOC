@@ -61,7 +61,7 @@ public class SubscriberGrain : Grain, ISubscriberGrain, IAsyncObserver<string>
 
     public Task OnNextAsync(string item, StreamSequenceToken? token = null)
     {
-        _logger.LogInformation("Subscriber grain {GrainId} on silo {Silo} received publication: {UniqueMessageId} - {Publication}", this.GetPrimaryKeyString(), _grainRuntime.SiloAddress, Guid.NewGuid().ToString().Substring(0, 8), item);
+        _logger.LogInformation("Subscriber grain {GrainId} on silo {Silo} received publication: {Publication}", this.GetPrimaryKeyString(), _grainRuntime.SiloAddress, item);
         return Task.CompletedTask;
     }
 
