@@ -5,8 +5,6 @@ using OrleansPOC.Endpoints;
 using OrleansPOC.Extensions;
 using Serilog;
 using Serilog.Events;
-using Streams.Streaming;
-
 namespace OrleansPOC;
 
 public static class SiloHelper
@@ -28,7 +26,6 @@ public static class SiloHelper
             Log.Information("Running in environment {Environment}", builder.Environment.EnvironmentName);
             builder.Host.UseOrleansPoc(config);
             builder.Host.UseSerilog();
-            builder.Services.AddArtisStreaming();
 
             WebApplication app = builder.Build();
             app.Map("/dashboard", x => x.UseOrleansDashboard());

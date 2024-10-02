@@ -1,0 +1,138 @@
+C:\Users\Florian.Meinschad\AppData\Local\Programs\Rider\plugins\dpa\DotFiles\JetBrains.DPA.Runner.exe --handle=4328 --backend-pid=10120 --etw-collect-flags=67108622 --detach-event-name=dpa.detach.4328 D:/OrleansPOC/Silo1/bin/Debug/net8.0/Silo1.exe
+[09:18:57 INF] Running in environment Development
+[09:18:57 INF] Using Orleans Silo Port 11111
+[09:18:57 INF] Using Orleans Silo GW 30000
+[09:18:57 INF] Use orleans localhost clustering
+[09:18:57 INF] Starting Host
+[09:18:57 WRN] Note: Silo not running with ServerGC turned on - recommend checking app config : <configuration>-<runtime>-<gcServer enabled="true">
+[09:18:58 WRN] Note: ServerGC only kicks in on multi-core systems (settings enabling ServerGC have no effect on single-core machines).
+[09:18:59 INF] Starting OrleansDashboard.SiloGrainService grain service on: S127.0.0.1:11111:86858337 xED325E7F, with range <(0 0], Size=x100000000, %Ring=100%>
+[09:18:59 INF] My range changed from <(0 0], Size=x100000000, %Ring=100%> to <(0 0], Size=x100000000, %Ring=100%> increased = True
+[09:19:21 INF] Starting publisher grain
+[09:19:21 INF] Publisher started successfully on silo S127.0.0.1:11111:86858337
+[09:19:21 INF] Publisher grain started with Id 00000000-0000-0000-0000-000000000000
+[09:19:22 INF] Starting subscriber grains
+[09:19:22 INF] Create subscription for subscriber f8703b33f7f4437d8242e318ba7f0278
+[09:19:22 INF] Subscriber started successfully on silo S127.0.0.1:11111:86858337
+[09:19:22 INF] Create subscription for subscriber 1a471e2917c54a81bdfe7214534bcf71
+[09:19:22 INF] Subscriber started successfully on silo S127.0.0.1:11111:86858337
+[09:19:22 INF] Create subscription for subscriber f182ba0c251e4ab19c6bbedff553dea8
+[09:19:22 INF] Subscriber started successfully on silo S127.0.0.1:11111:86858337
+[09:19:22 INF] 3 subscriber grains started
+[09:19:27 INF] Subscriber grain f8703b33f7f4437d8242e318ba7f0278 on silo S127.0.0.1:11111:86858337 received publication: c4fd5b32 - Message sent from publisher
+[09:19:27 INF] Subscriber grain f182ba0c251e4ab19c6bbedff553dea8 on silo S127.0.0.1:11111:86858337 received publication: d47c9a8c - Message sent from publisher
+[09:19:27 INF] Subscriber grain 1a471e2917c54a81bdfe7214534bcf71 on silo S127.0.0.1:11111:86858337 received publication: f3ba21f3 - Message sent from publisher
+[09:19:32 INF] Subscriber grain f182ba0c251e4ab19c6bbedff553dea8 on silo S127.0.0.1:11111:86858337 received publication: e70d8203 - Message sent from publisher
+[09:19:32 INF] Subscriber grain 1a471e2917c54a81bdfe7214534bcf71 on silo S127.0.0.1:11111:86858337 received publication: a3229721 - Message sent from publisher
+[09:19:32 INF] Subscriber grain f8703b33f7f4437d8242e318ba7f0278 on silo S127.0.0.1:11111:86858337 received publication: f43cd769 - Message sent from publisher
+[09:19:35 INF] My range changed from <(0 0], Size=x100000000, %Ring=100%> to <MultiRange: Size=x6BD508BA, %Ring=42,122%> increased = True
+[09:19:37 DBG] Error during subscribing to publisher Grain
+[09:19:37 DBG] Error during subscribing to publisher Grain
+[09:19:37 DBG] Error during subscribing to publisher Grain
+[09:19:37 INF] Subscriber grain 1a471e2917c54a81bdfe7214534bcf71 on silo S127.0.0.1:11111:86858337 received publication: 1a92d4cd - Message sent from publisher
+[09:19:37 INF] Subscriber grain f8703b33f7f4437d8242e318ba7f0278 on silo S127.0.0.1:11111:86858337 received publication: 2437de6d - Message sent from publisher
+[09:19:37 INF] Subscriber grain f182ba0c251e4ab19c6bbedff553dea8 on silo S127.0.0.1:11111:86858337 received publication: 674baf0c - Message sent from publisher
+[09:19:39 INF] Publishing single message
+[09:19:39 INF] Send single message from endpoint on silo S127.0.0.1:11111:86858337: test
+[09:19:39 INF] Subscriber grain f8703b33f7f4437d8242e318ba7f0278 on silo S127.0.0.1:11111:86858337 received publication: c3275e73 - Message from endpoint: test
+[09:19:39 INF] Subscriber grain 1a471e2917c54a81bdfe7214534bcf71 on silo S127.0.0.1:11111:86858337 received publication: eaa38216 - Message from endpoint: test
+[09:19:39 INF] Subscriber grain f182ba0c251e4ab19c6bbedff553dea8 on silo S127.0.0.1:11111:86858337 received publication: 30d8ef50 - Message from endpoint: test
+[09:19:42 INF] Subscriber grain f182ba0c251e4ab19c6bbedff553dea8 on silo S127.0.0.1:11111:86858337 received publication: c5352799 - Message sent from publisher
+[09:19:42 INF] Subscriber grain f8703b33f7f4437d8242e318ba7f0278 on silo S127.0.0.1:11111:86858337 received publication: 4a821c0c - Message sent from publisher
+[09:19:42 INF] Subscriber grain 1a471e2917c54a81bdfe7214534bcf71 on silo S127.0.0.1:11111:86858337 received publication: b3d06d49 - Message sent from publisher
+[09:19:47 INF] Subscriber grain f8703b33f7f4437d8242e318ba7f0278 on silo S127.0.0.1:11111:86858337 received publication: 84a1b624 - Message sent from publisher
+[09:19:47 INF] Subscriber grain f182ba0c251e4ab19c6bbedff553dea8 on silo S127.0.0.1:11111:86858337 received publication: 2cfc82d7 - Message sent from publisher
+[09:19:47 INF] Subscriber grain 1a471e2917c54a81bdfe7214534bcf71 on silo S127.0.0.1:11111:86858337 received publication: b0ec011a - Message sent from publisher
+[09:19:52 INF] Subscriber grain f182ba0c251e4ab19c6bbedff553dea8 on silo S127.0.0.1:11111:86858337 received publication: 06e34625 - Message sent from publisher
+[09:19:52 INF] Subscriber grain f8703b33f7f4437d8242e318ba7f0278 on silo S127.0.0.1:11111:86858337 received publication: acebc68e - Message sent from publisher
+[09:19:52 INF] Subscriber grain 1a471e2917c54a81bdfe7214534bcf71 on silo S127.0.0.1:11111:86858337 received publication: 70b19971 - Message sent from publisher
+[09:19:57 INF] Subscriber grain 1a471e2917c54a81bdfe7214534bcf71 on silo S127.0.0.1:11111:86858337 received publication: 35cada08 - Message sent from publisher
+[09:19:57 INF] Subscriber grain f182ba0c251e4ab19c6bbedff553dea8 on silo S127.0.0.1:11111:86858337 received publication: eae30a51 - Message sent from publisher
+[09:19:57 INF] Subscriber grain f8703b33f7f4437d8242e318ba7f0278 on silo S127.0.0.1:11111:86858337 received publication: 9a0dfeb6 - Message sent from publisher
+[09:20:02 INF] Subscriber grain f182ba0c251e4ab19c6bbedff553dea8 on silo S127.0.0.1:11111:86858337 received publication: 00720e5c - Message sent from publisher
+[09:20:02 INF] Subscriber grain 1a471e2917c54a81bdfe7214534bcf71 on silo S127.0.0.1:11111:86858337 received publication: ff8c8d51 - Message sent from publisher
+[09:20:02 INF] Subscriber grain f8703b33f7f4437d8242e318ba7f0278 on silo S127.0.0.1:11111:86858337 received publication: 01a04228 - Message sent from publisher
+[09:20:02 WRN] Exception while processing messages from remote endpoint 127.0.0.1:62252
+Microsoft.AspNetCore.Connections.ConnectionResetException: Eine vorhandene Verbindung wurde vom Remotehost geschlossen.
+ ---> System.Net.Sockets.SocketException (10054): Eine vorhandene Verbindung wurde vom Remotehost geschlossen.
+   at Orleans.Networking.Shared.SocketAwaitableEventArgs.<GetResult>g__ThrowSocketException|7_0(SocketError e) in /_/src/Orleans.Core/Networking/Shared/SocketAwaitableEventArgs.cs:line 42
+   at Orleans.Networking.Shared.SocketConnection.ProcessReceives() in /_/src/Orleans.Core/Networking/Shared/SocketConnection.cs:line 186
+   at Orleans.Networking.Shared.SocketConnection.DoReceive() in /_/src/Orleans.Core/Networking/Shared/SocketConnection.cs:line 135
+   --- End of inner exception stack trace ---
+   at System.IO.Pipelines.Pipe.GetReadResult(ReadResult& result)
+   at System.IO.Pipelines.Pipe.GetReadAsyncResult()
+   at Orleans.Runtime.Messaging.Connection.ProcessIncoming()
+[09:20:05 WRN] Connection attempt to endpoint S127.0.0.1:20000:86858374 failed
+Orleans.Networking.Shared.SocketConnectionException: Unable to connect to 127.0.0.1:20000. Error: ConnectionRefused
+   at Orleans.Networking.Shared.SocketConnectionFactory.ConnectAsync(EndPoint endpoint, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/Shared/SocketConnectionFactory.cs:line 65
+   at Orleans.Runtime.Messaging.ConnectionFactory.ConnectAsync(SiloAddress address, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/ConnectionFactory.cs:line 61
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 193
+[09:20:05 WRN] Did not get response for probe #7 to silo S127.0.0.1:20000:86858374 after 00:00:00.0122214. Current number of consecutive failed probes is 1
+Orleans.Runtime.OrleansMessageRejectionException: Exception while sending message: Orleans.Runtime.Messaging.ConnectionFailedException: Unable to connect to S127.0.0.1:20000:86858374, will retry after 867,3011ms
+   at Orleans.Runtime.Messaging.ConnectionManager.GetConnectionAsync(SiloAddress endpoint) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 99
+   at Orleans.Runtime.Messaging.MessageCenter.<SendMessage>g__SendAsync|30_0(MessageCenter messageCenter, ValueTask`1 connectionTask, Message msg) in /_/src/Orleans.Runtime/Messaging/MessageCenter.cs:line 236
+   at Orleans.Serialization.Invocation.ResponseCompletionSource.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 98
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at Orleans.Runtime.Scheduler.AsyncClosureWorkItem.Execute() in /_/src/Orleans.Runtime/Scheduler/ClosureWorkItem.cs:line 33
+   at Orleans.Runtime.MembershipService.RemoteSiloProber.Probe(SiloAddress remoteSilo, Int32 probeNumber, CancellationToken cancellationToken) in /_/src/Orleans.Runtime/MembershipService/RemoteSiloProber.cs:line 16
+   at Orleans.Runtime.MembershipService.SiloHealthMonitor.ProbeDirectly(CancellationToken cancellation) in /_/src/Orleans.Runtime/MembershipService/SiloHealthMonitor.cs:line 255
+[09:20:09 WRN] Connection attempt to endpoint S127.0.0.1:20000:86858374 failed
+Orleans.Networking.Shared.SocketConnectionException: Unable to connect to 127.0.0.1:20000. Error: ConnectionRefused
+   at Orleans.Networking.Shared.SocketConnectionFactory.ConnectAsync(EndPoint endpoint, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/Shared/SocketConnectionFactory.cs:line 65
+   at Orleans.Runtime.Messaging.ConnectionFactory.ConnectAsync(SiloAddress address, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/ConnectionFactory.cs:line 61
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 193
+[09:20:12 WRN] Connection attempt to endpoint S127.0.0.1:20000:86858374 failed
+Orleans.Networking.Shared.SocketConnectionException: Unable to connect to 127.0.0.1:20000. Error: ConnectionRefused
+   at Orleans.Networking.Shared.SocketConnectionFactory.ConnectAsync(EndPoint endpoint, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/Shared/SocketConnectionFactory.cs:line 65
+   at Orleans.Runtime.Messaging.ConnectionFactory.ConnectAsync(SiloAddress address, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/ConnectionFactory.cs:line 61
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 193
+[09:20:12 WRN] Did not get response for probe #8 to silo S127.0.0.1:20000:86858374 after 00:00:02.0606808. Current number of consecutive failed probes is 2
+Orleans.Runtime.OrleansMessageRejectionException: Exception while sending message: Orleans.Runtime.Messaging.ConnectionFailedException: Unable to connect to endpoint S127.0.0.1:20000:86858374. See InnerException
+ ---> Orleans.Networking.Shared.SocketConnectionException: Unable to connect to 127.0.0.1:20000. Error: ConnectionRefused
+   at Orleans.Networking.Shared.SocketConnectionFactory.ConnectAsync(EndPoint endpoint, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/Shared/SocketConnectionFactory.cs:line 65
+   at Orleans.Runtime.Messaging.ConnectionFactory.ConnectAsync(SiloAddress address, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/ConnectionFactory.cs:line 61
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 193
+   --- End of inner exception stack trace ---
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 221
+   at Orleans.Runtime.Messaging.MessageCenter.<SendMessage>g__SendAsync|30_0(MessageCenter messageCenter, ValueTask`1 connectionTask, Message msg) in /_/src/Orleans.Runtime/Messaging/MessageCenter.cs:line 236
+   at Orleans.Runtime.Messaging.ConnectionManager.GetConnectionAsync(SiloAddress endpoint) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 106
+   at Orleans.Runtime.Messaging.MessageCenter.<SendMessage>g__SendAsync|30_0(MessageCenter messageCenter, ValueTask`1 connectionTask, Message msg) in /_/src/Orleans.Runtime/Messaging/MessageCenter.cs:line 236
+   at Orleans.Serialization.Invocation.ResponseCompletionSource.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 98
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at Orleans.Runtime.Scheduler.AsyncClosureWorkItem.Execute() in /_/src/Orleans.Runtime/Scheduler/ClosureWorkItem.cs:line 33
+   at Orleans.Runtime.MembershipService.RemoteSiloProber.Probe(SiloAddress remoteSilo, Int32 probeNumber, CancellationToken cancellationToken) in /_/src/Orleans.Runtime/MembershipService/RemoteSiloProber.cs:line 16
+   at Orleans.Runtime.MembershipService.SiloHealthMonitor.ProbeDirectly(CancellationToken cancellation) in /_/src/Orleans.Runtime/MembershipService/SiloHealthMonitor.cs:line 255
+[09:20:16 WRN] Connection attempt to endpoint S127.0.0.1:20000:86858374 failed
+Orleans.Networking.Shared.SocketConnectionException: Unable to connect to 127.0.0.1:20000. Error: ConnectionRefused
+   at Orleans.Networking.Shared.SocketConnectionFactory.ConnectAsync(EndPoint endpoint, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/Shared/SocketConnectionFactory.cs:line 65
+   at Orleans.Runtime.Messaging.ConnectionFactory.ConnectAsync(SiloAddress address, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/ConnectionFactory.cs:line 61
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 193
+[09:20:16 WRN] Did not get response for probe #9 to silo S127.0.0.1:20000:86858374 after 00:00:00.9377507. Current number of consecutive failed probes is 3
+Orleans.Runtime.OrleansMessageRejectionException: Exception while sending message: Orleans.Runtime.Messaging.ConnectionFailedException: Unable to connect to endpoint S127.0.0.1:20000:86858374. See InnerException
+ ---> Orleans.Networking.Shared.SocketConnectionException: Unable to connect to 127.0.0.1:20000. Error: ConnectionRefused
+   at Orleans.Networking.Shared.SocketConnectionFactory.ConnectAsync(EndPoint endpoint, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/Shared/SocketConnectionFactory.cs:line 65
+   at Orleans.Runtime.Messaging.ConnectionFactory.ConnectAsync(SiloAddress address, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/ConnectionFactory.cs:line 61
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 193
+   --- End of inner exception stack trace ---
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 221
+   at Orleans.Runtime.Messaging.ConnectionManager.GetConnectionAsync(SiloAddress endpoint) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 106
+   at Orleans.Runtime.Messaging.ConnectionManager.GetConnectionAsync(SiloAddress endpoint) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 106
+   at Orleans.Runtime.Messaging.MessageCenter.<SendMessage>g__SendAsync|30_0(MessageCenter messageCenter, ValueTask`1 connectionTask, Message msg) in /_/src/Orleans.Runtime/Messaging/MessageCenter.cs:line 236
+   at Orleans.Serialization.Invocation.ResponseCompletionSource.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 98
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at Orleans.Runtime.Scheduler.AsyncClosureWorkItem.Execute() in /_/src/Orleans.Runtime/Scheduler/ClosureWorkItem.cs:line 33
+   at Orleans.Runtime.MembershipService.RemoteSiloProber.Probe(SiloAddress remoteSilo, Int32 probeNumber, CancellationToken cancellationToken) in /_/src/Orleans.Runtime/MembershipService/RemoteSiloProber.cs:line 16
+   at Orleans.Runtime.MembershipService.SiloHealthMonitor.ProbeDirectly(CancellationToken cancellation) in /_/src/Orleans.Runtime/MembershipService/SiloHealthMonitor.cs:line 255
+[09:20:16 INF] My range changed from <MultiRange: Size=x6BD508BA, %Ring=42,122%> to <(0 0], Size=x100000000, %Ring=100%> increased = True
+[09:20:16 INF] Subscriber stopped successfully on silo S127.0.0.1:11111:86858337, because of {"Description": "This activation is being deactivated due to a failure of server S127.0.0.1:20000:86858374, since it was responsible for this activation's grain directory registration.", "ReasonCode": "InternalFailure", "Exception": null, "$type": "DeactivationReason"}
+[09:20:16 INF] Subscriber stopped successfully on silo S127.0.0.1:11111:86858337, because of {"Description": "This activation is being deactivated due to a failure of server S127.0.0.1:20000:86858374, since it was responsible for this activation's grain directory registration.", "ReasonCode": "InternalFailure", "Exception": null, "$type": "DeactivationReason"}
+[09:20:36 INF] Publishing single message
+[09:20:36 INF] Send single message from endpoint on silo S127.0.0.1:11111:86858337: test
+[09:20:40 INF] Publishing single message
+[09:20:40 INF] Send single message from endpoint on silo S127.0.0.1:11111:86858337: test
+
+-------------------------------------------------------------------------------------------------------------------------------------
+Manual publish message into stream is triggered, but no messages are received anymore in the subscribers
