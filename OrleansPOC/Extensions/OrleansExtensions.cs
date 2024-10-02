@@ -1,5 +1,6 @@
 using System.Net;
 using Microsoft.Extensions.Hosting;
+using Orleans.Configuration;
 using OrleansPOC.Config;
 using OrleansPOC.Grains;
 using Serilog;
@@ -23,6 +24,12 @@ internal static class OrleansExtensions
         {
             silo.UseDashboard(options => {
                 options.HostSelf = false;
+            });
+
+            silo.Configure<ClusterMembershipOptions>(options =>
+            {
+                options.ProbeTimeout = TimeSpan.FromSeconds(10);
+                options.NumVotesForDeathDeclaration = 3;
             });
 
             Log.Information("Using Orleans Silo Port {Port}", config.SiloPort);

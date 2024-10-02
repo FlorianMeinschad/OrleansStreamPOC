@@ -1,7 +1,9 @@
 using Microsoft.Extensions.Logging;
+using Orleans.Concurrency;
 
 namespace OrleansPOC.Grains.HealthCheck;
 
+[StatelessWorker]
 public class HealthCheckGrain(ILogger<IHealthCheckGrain> logger, IGrainRuntime grainRuntime) : Grain, IHealthCheckGrain
 {
     public Task CheckAsync()

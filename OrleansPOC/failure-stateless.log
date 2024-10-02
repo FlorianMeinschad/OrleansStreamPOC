@@ -1,0 +1,696 @@
+C:\Users\Florian.Meinschad\AppData\Local\Programs\Rider\plugins\dpa\DotFiles\JetBrains.DPA.Runner.exe --handle=15716 --backend-pid=10120 --etw-collect-flags=67108622 --detach-event-name=dpa.detach.15716 D:/OrleansPOC/Silo1/bin/Debug/net8.0/Silo1.exe
+[10:55:11 INF] Running in environment Development
+[10:55:11 INF] Using Orleans Silo Port 11111
+[10:55:11 INF] Using Orleans Silo GW 30000
+[10:55:11 INF] Use orleans localhost clustering
+[10:55:12 INF] Starting Host
+[10:55:12 WRN] Note: Silo not running with ServerGC turned on - recommend checking app config : <configuration>-<runtime>-<gcServer enabled="true">
+[10:55:12 WRN] Note: ServerGC only kicks in on multi-core systems (settings enabling ServerGC have no effect on single-core machines).
+[10:55:14 INF] Starting OrleansDashboard.SiloGrainService grain service on: S127.0.0.1:11111:86864112 xB436F2B4, with range <(0 0], Size=x100000000, %Ring=100%>
+[10:55:14 INF] My range changed from <(0 0], Size=x100000000, %Ring=100%> to <(0 0], Size=x100000000, %Ring=100%> increased = True
+[10:55:19 INF] HealthCheck Grain started successfully on silo S127.0.0.1:11111:86864112
+[10:55:19 INF] Starting publisher grain
+[10:55:19 INF] Publisher started successfully on silo S127.0.0.1:11111:86864112
+[10:55:19 INF] Publisher grain started with Id 00000000-0000-0000-0000-000000000000
+[10:55:20 INF] HealthCheck Grain is still alive
+[10:55:20 INF] Starting subscriber grains
+[10:55:20 INF] Create subscription for subscriber da62680eef914f5fbaa321bd406b5a53
+[10:55:21 INF] Subscriber started successfully on silo S127.0.0.1:11111:86864112
+[10:55:21 INF] Create subscription for subscriber 66cbea6503264ed4866722e9923caf29
+[10:55:21 INF] Subscriber started successfully on silo S127.0.0.1:11111:86864112
+[10:55:21 INF] Create subscription for subscriber 3443c3e21ae9401a91049725cb91af25
+[10:55:21 INF] Subscriber started successfully on silo S127.0.0.1:11111:86864112
+[10:55:21 INF] Subscriber grain da62680eef914f5fbaa321bd406b5a53 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:55:21 INF] 3 subscriber grains started
+[10:55:25 INF] HealthCheck Grain is still alive
+[10:55:26 INF] Subscriber grain 66cbea6503264ed4866722e9923caf29 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:55:26 INF] Subscriber grain 3443c3e21ae9401a91049725cb91af25 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:55:26 INF] Subscriber grain da62680eef914f5fbaa321bd406b5a53 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:55:26 INF] My range changed from <(0 0], Size=x100000000, %Ring=100%> to <MultiRange: Size=x634B2A26, %Ring=38,787%> increased = True
+[10:55:30 INF] HealthCheck Grain is still alive
+[10:55:31 DBG] Error during subscribing to publisher Grain
+[10:55:31 DBG] Error during subscribing to publisher Grain
+[10:55:31 DBG] Error during subscribing to publisher Grain
+[10:55:31 INF] Subscriber grain da62680eef914f5fbaa321bd406b5a53 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:55:31 INF] Subscriber grain 3443c3e21ae9401a91049725cb91af25 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:55:31 INF] Subscriber grain 66cbea6503264ed4866722e9923caf29 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:55:35 INF] HealthCheck Grain is still alive
+[10:55:36 INF] Subscriber grain da62680eef914f5fbaa321bd406b5a53 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:55:36 INF] Subscriber grain 66cbea6503264ed4866722e9923caf29 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:55:36 INF] Subscriber grain 3443c3e21ae9401a91049725cb91af25 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:55:40 INF] HealthCheck Grain is still alive
+[10:55:41 INF] Subscriber grain 3443c3e21ae9401a91049725cb91af25 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:55:41 INF] Subscriber grain 66cbea6503264ed4866722e9923caf29 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:55:41 INF] Subscriber grain da62680eef914f5fbaa321bd406b5a53 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:55:45 INF] HealthCheck Grain is still alive
+[10:55:46 INF] Subscriber grain 3443c3e21ae9401a91049725cb91af25 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:55:46 INF] Subscriber grain da62680eef914f5fbaa321bd406b5a53 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:55:46 INF] Subscriber grain 66cbea6503264ed4866722e9923caf29 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:55:50 INF] HealthCheck Grain is still alive
+[10:55:51 INF] Subscriber grain 66cbea6503264ed4866722e9923caf29 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:55:51 INF] Subscriber grain da62680eef914f5fbaa321bd406b5a53 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:55:51 INF] Subscriber grain 3443c3e21ae9401a91049725cb91af25 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:55:55 INF] HealthCheck Grain is still alive
+[10:55:55 INF] Subscriber grain da62680eef914f5fbaa321bd406b5a53 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:55:55 INF] Subscriber grain 3443c3e21ae9401a91049725cb91af25 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:55:55 INF] Subscriber grain 66cbea6503264ed4866722e9923caf29 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:56:00 INF] HealthCheck Grain is still alive
+[10:56:01 INF] Subscriber grain 66cbea6503264ed4866722e9923caf29 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:56:01 INF] Subscriber grain 3443c3e21ae9401a91049725cb91af25 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:56:01 INF] Subscriber grain da62680eef914f5fbaa321bd406b5a53 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:56:05 INF] HealthCheck Grain is still alive
+[10:56:06 INF] Subscriber grain 66cbea6503264ed4866722e9923caf29 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:56:06 INF] Subscriber grain da62680eef914f5fbaa321bd406b5a53 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:56:06 INF] Subscriber grain 3443c3e21ae9401a91049725cb91af25 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:56:10 INF] HealthCheck Grain is still alive
+[10:56:11 INF] Subscriber grain da62680eef914f5fbaa321bd406b5a53 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:56:11 INF] Subscriber grain 66cbea6503264ed4866722e9923caf29 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:56:11 INF] Subscriber grain 3443c3e21ae9401a91049725cb91af25 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:56:15 INF] HealthCheck Grain is still alive
+[10:56:16 INF] Subscriber grain 3443c3e21ae9401a91049725cb91af25 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:56:16 INF] Subscriber grain da62680eef914f5fbaa321bd406b5a53 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:56:16 INF] Subscriber grain 66cbea6503264ed4866722e9923caf29 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:56:20 INF] HealthCheck Grain is still alive
+[10:56:21 INF] Subscriber grain da62680eef914f5fbaa321bd406b5a53 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:56:21 INF] Subscriber grain 66cbea6503264ed4866722e9923caf29 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:56:21 INF] Subscriber grain 3443c3e21ae9401a91049725cb91af25 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:56:25 INF] HealthCheck Grain is still alive
+[10:56:26 INF] Subscriber grain da62680eef914f5fbaa321bd406b5a53 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:56:26 INF] Subscriber grain 66cbea6503264ed4866722e9923caf29 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:56:26 INF] Subscriber grain 3443c3e21ae9401a91049725cb91af25 on silo S127.0.0.1:11111:86864112 received publication: Message sent from publisher
+[10:56:27 WRN] Exception while processing messages from remote endpoint 127.0.0.1:49805
+Microsoft.AspNetCore.Connections.ConnectionResetException: Eine vorhandene Verbindung wurde vom Remotehost geschlossen.
+ ---> System.Net.Sockets.SocketException (10054): Eine vorhandene Verbindung wurde vom Remotehost geschlossen.
+   at Orleans.Networking.Shared.SocketAwaitableEventArgs.<GetResult>g__ThrowSocketException|7_0(SocketError e) in /_/src/Orleans.Core/Networking/Shared/SocketAwaitableEventArgs.cs:line 42
+   at Orleans.Networking.Shared.SocketConnection.ProcessReceives() in /_/src/Orleans.Core/Networking/Shared/SocketConnection.cs:line 186
+   at Orleans.Networking.Shared.SocketConnection.DoReceive() in /_/src/Orleans.Core/Networking/Shared/SocketConnection.cs:line 135
+   --- End of inner exception stack trace ---
+   at System.IO.Pipelines.Pipe.GetReadResult(ReadResult& result)
+   at System.IO.Pipelines.Pipe.GetReadAsyncResult()
+   at Orleans.Runtime.Messaging.Connection.ProcessIncoming()
+[10:56:29 WRN] Connection attempt to endpoint S127.0.0.1:20000:86864125 failed
+Orleans.Networking.Shared.SocketConnectionException: Unable to connect to 127.0.0.1:20000. Error: ConnectionRefused
+   at Orleans.Networking.Shared.SocketConnectionFactory.ConnectAsync(EndPoint endpoint, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/Shared/SocketConnectionFactory.cs:line 65
+   at Orleans.Runtime.Messaging.ConnectionFactory.ConnectAsync(SiloAddress address, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/ConnectionFactory.cs:line 61
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 193
+[10:56:29 ERR] An unhandled exception has occurred while executing the request.
+Orleans.Runtime.OrleansMessageRejectionException: Exception while sending message: Orleans.Runtime.Messaging.ConnectionFailedException: Unable to connect to endpoint S127.0.0.1:20000:86864125. See InnerException
+ ---> Orleans.Networking.Shared.SocketConnectionException: Unable to connect to 127.0.0.1:20000. Error: ConnectionRefused
+   at Orleans.Networking.Shared.SocketConnectionFactory.ConnectAsync(EndPoint endpoint, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/Shared/SocketConnectionFactory.cs:line 65
+   at Orleans.Runtime.Messaging.ConnectionFactory.ConnectAsync(SiloAddress address, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/ConnectionFactory.cs:line 61
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 193
+   --- End of inner exception stack trace ---
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 221
+   at Orleans.Runtime.Messaging.ConnectionManager.GetConnectionAsync(SiloAddress endpoint) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 106
+   at Orleans.Runtime.Messaging.ConnectionManager.GetConnectionAsync(SiloAddress endpoint) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 106
+   at Orleans.Runtime.Messaging.MessageCenter.<SendMessage>g__SendAsync|30_0(MessageCenter messageCenter, ValueTask`1 connectionTask, Message msg) in /_/src/Orleans.Runtime/Messaging/MessageCenter.cs:line 236
+   at Orleans.Runtime.Messaging.MessageCenter.<SendMessage>g__SendAsync|30_0(MessageCenter messageCenter, ValueTask`1 connectionTask, Message msg) in /_/src/Orleans.Runtime/Messaging/MessageCenter.cs:line 236
+   at Orleans.Runtime.Messaging.MessageCenter.<SendMessage>g__SendAsync|30_0(MessageCenter messageCenter, ValueTask`1 connectionTask, Message msg) in /_/src/Orleans.Runtime/Messaging/MessageCenter.cs:line 236
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at Orleans.Runtime.Management.ManagementGrain.GetTotalActivationCount() in /_/src/Orleans.Runtime/Core/ManagementGrain.cs:line 212
+   at Orleans.Runtime.TaskRequest`1.CompleteInvokeAsync(Task`1 resultTask) in /_/src/Orleans.Core.Abstractions/Runtime/GrainReference.cs:line 704
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 132
+   at OrleansDashboard.Implementation.GrainProfilerFilter.Invoke(IIncomingGrainCallContext context)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 94
+   at Orleans.Runtime.InsideRuntimeClient.Invoke(IGrainContext target, Message message) in /_/src/Orleans.Runtime/Core/InsideRuntimeClient.cs:line 267
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at OrleansDashboard.Implementation.Grains.DashboardGrain.EnsureCountersAreUpToDate()
+   at OrleansDashboard.Implementation.Grains.DashboardGrain.GetCounters()
+   at Orleans.Runtime.TaskRequest`1.CompleteInvokeAsync(Task`1 resultTask)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 132
+   at OrleansDashboard.Implementation.GrainProfilerFilter.Invoke(IIncomingGrainCallContext context)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 94
+   at Orleans.Runtime.InsideRuntimeClient.Invoke(IGrainContext target, Message message) in /_/src/Orleans.Runtime/Core/InsideRuntimeClient.cs:line 267
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at OrleansDashboard.DashboardClient.DashboardCounters()
+   at OrleansDashboard.DashboardMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.InvokeCore(HttpContext context, PathString matchedPath, PathString remainingPath)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[10:56:30 INF] HealthCheck Grain is still alive
+[10:56:30 ERR] An unhandled exception has occurred while executing the request.
+Orleans.Runtime.OrleansMessageRejectionException: Exception while sending message: Orleans.Runtime.Messaging.ConnectionFailedException: Unable to connect to S127.0.0.1:20000:86864125, will retry after 282,4224ms
+   at Orleans.Runtime.Messaging.ConnectionManager.GetConnectionAsync(SiloAddress endpoint) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 99
+   at Orleans.Runtime.Messaging.MessageCenter.<SendMessage>g__SendAsync|30_0(MessageCenter messageCenter, ValueTask`1 connectionTask, Message msg) in /_/src/Orleans.Runtime/Messaging/MessageCenter.cs:line 236
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at Orleans.Runtime.Management.ManagementGrain.GetSimpleGrainStatistics(SiloAddress[] hostsIds) in /_/src/Orleans.Runtime/Core/ManagementGrain.cs:line 136
+   at Orleans.Runtime.Management.ManagementGrain.GetSimpleGrainStatistics() in /_/src/Orleans.Runtime/Core/ManagementGrain.cs:line 144
+   at Orleans.Runtime.TaskRequest`1.CompleteInvokeAsync(Task`1 resultTask)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 132
+   at OrleansDashboard.Implementation.GrainProfilerFilter.Invoke(IIncomingGrainCallContext context)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 94
+   at Orleans.Runtime.InsideRuntimeClient.Invoke(IGrainContext target, Message message) in /_/src/Orleans.Runtime/Core/InsideRuntimeClient.cs:line 267
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at OrleansDashboard.Implementation.Grains.DashboardGrain.EnsureCountersAreUpToDate()
+   at OrleansDashboard.Implementation.Grains.DashboardGrain.GetGrainTracing(String grain)
+   at Orleans.Runtime.TaskRequest`1.CompleteInvokeAsync(Task`1 resultTask)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 132
+   at OrleansDashboard.Implementation.GrainProfilerFilter.Invoke(IIncomingGrainCallContext context)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 94
+   at Orleans.Runtime.InsideRuntimeClient.Invoke(IGrainContext target, Message message) in /_/src/Orleans.Runtime/Core/InsideRuntimeClient.cs:line 267
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at OrleansDashboard.DashboardClient.GrainStats(String grainName)
+   at OrleansDashboard.DashboardMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.InvokeCore(HttpContext context, PathString matchedPath, PathString remainingPath)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[10:56:32 WRN] Connection attempt to endpoint S127.0.0.1:20000:86864125 failed
+Orleans.Networking.Shared.SocketConnectionException: Unable to connect to 127.0.0.1:20000. Error: ConnectionRefused
+   at Orleans.Networking.Shared.SocketConnectionFactory.ConnectAsync(EndPoint endpoint, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/Shared/SocketConnectionFactory.cs:line 65
+   at Orleans.Runtime.Messaging.ConnectionFactory.ConnectAsync(SiloAddress address, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/ConnectionFactory.cs:line 61
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 193
+[10:56:32 ERR] An unhandled exception has occurred while executing the request.
+Orleans.Runtime.OrleansMessageRejectionException: Exception while sending message: Orleans.Runtime.Messaging.ConnectionFailedException: Unable to connect to endpoint S127.0.0.1:20000:86864125. See InnerException
+ ---> Orleans.Networking.Shared.SocketConnectionException: Unable to connect to 127.0.0.1:20000. Error: ConnectionRefused
+   at Orleans.Networking.Shared.SocketConnectionFactory.ConnectAsync(EndPoint endpoint, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/Shared/SocketConnectionFactory.cs:line 65
+   at Orleans.Runtime.Messaging.ConnectionFactory.ConnectAsync(SiloAddress address, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/ConnectionFactory.cs:line 61
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 193
+   --- End of inner exception stack trace ---
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 221
+   at Orleans.Runtime.Messaging.MessageCenter.<SendMessage>g__SendAsync|30_0(MessageCenter messageCenter, ValueTask`1 connectionTask, Message msg) in /_/src/Orleans.Runtime/Messaging/MessageCenter.cs:line 236
+   at Orleans.Runtime.Messaging.ConnectionManager.GetConnectionAsync(SiloAddress endpoint) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 106
+   at Orleans.Runtime.Messaging.MessageCenter.<SendMessage>g__SendAsync|30_0(MessageCenter messageCenter, ValueTask`1 connectionTask, Message msg) in /_/src/Orleans.Runtime/Messaging/MessageCenter.cs:line 236
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at Orleans.Runtime.Management.ManagementGrain.GetTotalActivationCount() in /_/src/Orleans.Runtime/Core/ManagementGrain.cs:line 212
+   at Orleans.Runtime.TaskRequest`1.CompleteInvokeAsync(Task`1 resultTask) in /_/src/Orleans.Core.Abstractions/Runtime/GrainReference.cs:line 704
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 132
+   at OrleansDashboard.Implementation.GrainProfilerFilter.Invoke(IIncomingGrainCallContext context)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 94
+   at Orleans.Runtime.InsideRuntimeClient.Invoke(IGrainContext target, Message message) in /_/src/Orleans.Runtime/Core/InsideRuntimeClient.cs:line 267
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at OrleansDashboard.Implementation.Grains.DashboardGrain.EnsureCountersAreUpToDate()
+   at OrleansDashboard.Implementation.Grains.DashboardGrain.GetCounters()
+   at Orleans.Runtime.TaskRequest`1.CompleteInvokeAsync(Task`1 resultTask)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 132
+   at OrleansDashboard.Implementation.GrainProfilerFilter.Invoke(IIncomingGrainCallContext context)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 94
+   at Orleans.Runtime.InsideRuntimeClient.Invoke(IGrainContext target, Message message) in /_/src/Orleans.Runtime/Core/InsideRuntimeClient.cs:line 267
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at OrleansDashboard.DashboardClient.DashboardCounters()
+   at OrleansDashboard.DashboardMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.InvokeCore(HttpContext context, PathString matchedPath, PathString remainingPath)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[10:56:32 WRN] Did not get response for probe #7 to silo S127.0.0.1:20000:86864125 after 00:00:01.5626214. Current number of consecutive failed probes is 1
+Orleans.Runtime.OrleansMessageRejectionException: Exception while sending message: Orleans.Runtime.Messaging.ConnectionFailedException: Unable to connect to endpoint S127.0.0.1:20000:86864125. See InnerException
+ ---> Orleans.Networking.Shared.SocketConnectionException: Unable to connect to 127.0.0.1:20000. Error: ConnectionRefused
+   at Orleans.Networking.Shared.SocketConnectionFactory.ConnectAsync(EndPoint endpoint, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/Shared/SocketConnectionFactory.cs:line 65
+   at Orleans.Runtime.Messaging.ConnectionFactory.ConnectAsync(SiloAddress address, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/ConnectionFactory.cs:line 61
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 193
+   --- End of inner exception stack trace ---
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 221
+   at Orleans.Runtime.Messaging.MessageCenter.<SendMessage>g__SendAsync|30_0(MessageCenter messageCenter, ValueTask`1 connectionTask, Message msg) in /_/src/Orleans.Runtime/Messaging/MessageCenter.cs:line 236
+   at Orleans.Runtime.Messaging.ConnectionManager.GetConnectionAsync(SiloAddress endpoint) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 106
+   at Orleans.Runtime.Messaging.MessageCenter.<SendMessage>g__SendAsync|30_0(MessageCenter messageCenter, ValueTask`1 connectionTask, Message msg) in /_/src/Orleans.Runtime/Messaging/MessageCenter.cs:line 236
+   at Orleans.Serialization.Invocation.ResponseCompletionSource.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 98
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at Orleans.Runtime.Scheduler.AsyncClosureWorkItem.Execute() in /_/src/Orleans.Runtime/Scheduler/ClosureWorkItem.cs:line 33
+   at Orleans.Runtime.MembershipService.RemoteSiloProber.Probe(SiloAddress remoteSilo, Int32 probeNumber, CancellationToken cancellationToken) in /_/src/Orleans.Runtime/MembershipService/RemoteSiloProber.cs:line 16
+   at Orleans.Runtime.MembershipService.SiloHealthMonitor.ProbeDirectly(CancellationToken cancellation) in /_/src/Orleans.Runtime/MembershipService/SiloHealthMonitor.cs:line 255
+[10:56:33 ERR] An unhandled exception has occurred while executing the request.
+Orleans.Runtime.OrleansMessageRejectionException: Exception while sending message: Orleans.Runtime.Messaging.ConnectionFailedException: Unable to connect to S127.0.0.1:20000:86864125, will retry after 371,781ms
+   at Orleans.Runtime.Messaging.ConnectionManager.GetConnectionAsync(SiloAddress endpoint) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 99
+   at Orleans.Runtime.Messaging.MessageCenter.<SendMessage>g__SendAsync|30_0(MessageCenter messageCenter, ValueTask`1 connectionTask, Message msg) in /_/src/Orleans.Runtime/Messaging/MessageCenter.cs:line 236
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at Orleans.Runtime.Management.ManagementGrain.GetTotalActivationCount() in /_/src/Orleans.Runtime/Core/ManagementGrain.cs:line 212
+   at Orleans.Runtime.TaskRequest`1.CompleteInvokeAsync(Task`1 resultTask) in /_/src/Orleans.Core.Abstractions/Runtime/GrainReference.cs:line 704
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 132
+   at OrleansDashboard.Implementation.GrainProfilerFilter.Invoke(IIncomingGrainCallContext context)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 94
+   at Orleans.Runtime.InsideRuntimeClient.Invoke(IGrainContext target, Message message) in /_/src/Orleans.Runtime/Core/InsideRuntimeClient.cs:line 267
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at OrleansDashboard.Implementation.Grains.DashboardGrain.EnsureCountersAreUpToDate()
+   at OrleansDashboard.Implementation.Grains.DashboardGrain.GetGrainTracing(String grain)
+   at Orleans.Runtime.TaskRequest`1.CompleteInvokeAsync(Task`1 resultTask)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 132
+   at OrleansDashboard.Implementation.GrainProfilerFilter.Invoke(IIncomingGrainCallContext context)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 94
+   at Orleans.Runtime.InsideRuntimeClient.Invoke(IGrainContext target, Message message) in /_/src/Orleans.Runtime/Core/InsideRuntimeClient.cs:line 267
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at OrleansDashboard.DashboardClient.GrainStats(String grainName)
+   at OrleansDashboard.DashboardMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.InvokeCore(HttpContext context, PathString matchedPath, PathString remainingPath)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[10:56:35 INF] HealthCheck Grain is still alive
+[10:56:36 WRN] Connection attempt to endpoint S127.0.0.1:20000:86864125 failed
+Orleans.Networking.Shared.SocketConnectionException: Unable to connect to 127.0.0.1:20000. Error: ConnectionRefused
+   at Orleans.Networking.Shared.SocketConnectionFactory.ConnectAsync(EndPoint endpoint, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/Shared/SocketConnectionFactory.cs:line 65
+   at Orleans.Runtime.Messaging.ConnectionFactory.ConnectAsync(SiloAddress address, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/ConnectionFactory.cs:line 61
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 193
+[10:56:36 ERR] An unhandled exception has occurred while executing the request.
+Orleans.Runtime.OrleansMessageRejectionException: Exception while sending message: Orleans.Runtime.Messaging.ConnectionFailedException: Unable to connect to endpoint S127.0.0.1:20000:86864125. See InnerException
+ ---> Orleans.Networking.Shared.SocketConnectionException: Unable to connect to 127.0.0.1:20000. Error: ConnectionRefused
+   at Orleans.Networking.Shared.SocketConnectionFactory.ConnectAsync(EndPoint endpoint, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/Shared/SocketConnectionFactory.cs:line 65
+   at Orleans.Runtime.Messaging.ConnectionFactory.ConnectAsync(SiloAddress address, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/ConnectionFactory.cs:line 61
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 193
+   --- End of inner exception stack trace ---
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 221
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at Orleans.Runtime.Management.ManagementGrain.GetDetailedGrainStatistics(String[] types, SiloAddress[] hostsIds) in /_/src/Orleans.Runtime/Core/ManagementGrain.cs:line 157
+   at Orleans.Runtime.TaskRequest`1.CompleteInvokeAsync(Task`1 resultTask)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 132
+   at OrleansDashboard.Implementation.GrainProfilerFilter.Invoke(IIncomingGrainCallContext context)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 94
+   at Orleans.Runtime.InsideRuntimeClient.Invoke(IGrainContext target, Message message) in /_/src/Orleans.Runtime/Core/InsideRuntimeClient.cs:line 267
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at OrleansDashboard.Implementation.Grains.DashboardGrain.EnsureCountersAreUpToDate()
+   at OrleansDashboard.Implementation.Grains.DashboardGrain.GetCounters()
+   at Orleans.Runtime.TaskRequest`1.CompleteInvokeAsync(Task`1 resultTask)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 132
+   at OrleansDashboard.Implementation.GrainProfilerFilter.Invoke(IIncomingGrainCallContext context)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 94
+   at Orleans.Runtime.InsideRuntimeClient.Invoke(IGrainContext target, Message message) in /_/src/Orleans.Runtime/Core/InsideRuntimeClient.cs:line 267
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at OrleansDashboard.DashboardClient.DashboardCounters()
+   at OrleansDashboard.DashboardMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.InvokeCore(HttpContext context, PathString matchedPath, PathString remainingPath)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[10:56:36 ERR] An unhandled exception has occurred while executing the request.
+Orleans.Runtime.OrleansMessageRejectionException: Exception while sending message: Orleans.Runtime.Messaging.ConnectionFailedException: Unable to connect to S127.0.0.1:20000:86864125, will retry after 451,0267ms
+   at Orleans.Runtime.Messaging.ConnectionManager.GetConnectionAsync(SiloAddress endpoint) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 99
+   at Orleans.Runtime.Messaging.MessageCenter.<SendMessage>g__SendAsync|30_0(MessageCenter messageCenter, ValueTask`1 connectionTask, Message msg) in /_/src/Orleans.Runtime/Messaging/MessageCenter.cs:line 236
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at Orleans.Runtime.Management.ManagementGrain.GetSimpleGrainStatistics(SiloAddress[] hostsIds) in /_/src/Orleans.Runtime/Core/ManagementGrain.cs:line 136
+   at Orleans.Runtime.Management.ManagementGrain.GetSimpleGrainStatistics() in /_/src/Orleans.Runtime/Core/ManagementGrain.cs:line 144
+   at Orleans.Runtime.TaskRequest`1.CompleteInvokeAsync(Task`1 resultTask)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 132
+   at OrleansDashboard.Implementation.GrainProfilerFilter.Invoke(IIncomingGrainCallContext context)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 94
+   at Orleans.Runtime.InsideRuntimeClient.Invoke(IGrainContext target, Message message) in /_/src/Orleans.Runtime/Core/InsideRuntimeClient.cs:line 267
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at OrleansDashboard.Implementation.Grains.DashboardGrain.EnsureCountersAreUpToDate()
+   at OrleansDashboard.Implementation.Grains.DashboardGrain.GetGrainTracing(String grain)
+   at Orleans.Runtime.TaskRequest`1.CompleteInvokeAsync(Task`1 resultTask)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 132
+   at OrleansDashboard.Implementation.GrainProfilerFilter.Invoke(IIncomingGrainCallContext context)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 94
+   at Orleans.Runtime.InsideRuntimeClient.Invoke(IGrainContext target, Message message) in /_/src/Orleans.Runtime/Core/InsideRuntimeClient.cs:line 267
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at OrleansDashboard.DashboardClient.GrainStats(String grainName)
+   at OrleansDashboard.DashboardMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.InvokeCore(HttpContext context, PathString matchedPath, PathString remainingPath)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[10:56:39 WRN] Connection attempt to endpoint S127.0.0.1:20000:86864125 failed
+Orleans.Networking.Shared.SocketConnectionException: Unable to connect to 127.0.0.1:20000. Error: ConnectionRefused
+   at Orleans.Networking.Shared.SocketConnectionFactory.ConnectAsync(EndPoint endpoint, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/Shared/SocketConnectionFactory.cs:line 65
+   at Orleans.Runtime.Messaging.ConnectionFactory.ConnectAsync(SiloAddress address, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/ConnectionFactory.cs:line 61
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 193
+[10:56:39 ERR] An unhandled exception has occurred while executing the request.
+Orleans.Runtime.OrleansMessageRejectionException: Exception while sending message: Orleans.Runtime.Messaging.ConnectionFailedException: Unable to connect to endpoint S127.0.0.1:20000:86864125. See InnerException
+ ---> Orleans.Networking.Shared.SocketConnectionException: Unable to connect to 127.0.0.1:20000. Error: ConnectionRefused
+   at Orleans.Networking.Shared.SocketConnectionFactory.ConnectAsync(EndPoint endpoint, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/Shared/SocketConnectionFactory.cs:line 65
+   at Orleans.Runtime.Messaging.ConnectionFactory.ConnectAsync(SiloAddress address, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/ConnectionFactory.cs:line 61
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 193
+   --- End of inner exception stack trace ---
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 221
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at Orleans.Runtime.Management.ManagementGrain.GetTotalActivationCount() in /_/src/Orleans.Runtime/Core/ManagementGrain.cs:line 212
+   at Orleans.Runtime.TaskRequest`1.CompleteInvokeAsync(Task`1 resultTask) in /_/src/Orleans.Core.Abstractions/Runtime/GrainReference.cs:line 704
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 132
+   at OrleansDashboard.Implementation.GrainProfilerFilter.Invoke(IIncomingGrainCallContext context)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 94
+   at Orleans.Runtime.InsideRuntimeClient.Invoke(IGrainContext target, Message message) in /_/src/Orleans.Runtime/Core/InsideRuntimeClient.cs:line 267
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at OrleansDashboard.Implementation.Grains.DashboardGrain.EnsureCountersAreUpToDate()
+   at OrleansDashboard.Implementation.Grains.DashboardGrain.GetCounters()
+   at Orleans.Runtime.TaskRequest`1.CompleteInvokeAsync(Task`1 resultTask)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 132
+   at OrleansDashboard.Implementation.GrainProfilerFilter.Invoke(IIncomingGrainCallContext context)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 94
+   at Orleans.Runtime.InsideRuntimeClient.Invoke(IGrainContext target, Message message) in /_/src/Orleans.Runtime/Core/InsideRuntimeClient.cs:line 267
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at OrleansDashboard.DashboardClient.DashboardCounters()
+   at OrleansDashboard.DashboardMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.InvokeCore(HttpContext context, PathString matchedPath, PathString remainingPath)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[10:56:39 ERR] An unhandled exception has occurred while executing the request.
+Orleans.Runtime.OrleansMessageRejectionException: Exception while sending message: Orleans.Runtime.Messaging.ConnectionFailedException: Unable to connect to S127.0.0.1:20000:86864125, will retry after 529,7226ms
+   at Orleans.Runtime.Messaging.ConnectionManager.GetConnectionAsync(SiloAddress endpoint) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 99
+   at Orleans.Runtime.Messaging.MessageCenter.<SendMessage>g__SendAsync|30_0(MessageCenter messageCenter, ValueTask`1 connectionTask, Message msg) in /_/src/Orleans.Runtime/Messaging/MessageCenter.cs:line 236
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at Orleans.Runtime.Management.ManagementGrain.GetDetailedGrainStatistics(String[] types, SiloAddress[] hostsIds) in /_/src/Orleans.Runtime/Core/ManagementGrain.cs:line 157
+   at Orleans.Runtime.TaskRequest`1.CompleteInvokeAsync(Task`1 resultTask)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 132
+   at OrleansDashboard.Implementation.GrainProfilerFilter.Invoke(IIncomingGrainCallContext context)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 94
+   at Orleans.Runtime.InsideRuntimeClient.Invoke(IGrainContext target, Message message) in /_/src/Orleans.Runtime/Core/InsideRuntimeClient.cs:line 267
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at OrleansDashboard.Implementation.Grains.DashboardGrain.EnsureCountersAreUpToDate()
+   at OrleansDashboard.Implementation.Grains.DashboardGrain.GetGrainTracing(String grain)
+   at Orleans.Runtime.TaskRequest`1.CompleteInvokeAsync(Task`1 resultTask)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 132
+   at OrleansDashboard.Implementation.GrainProfilerFilter.Invoke(IIncomingGrainCallContext context)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 94
+   at Orleans.Runtime.InsideRuntimeClient.Invoke(IGrainContext target, Message message) in /_/src/Orleans.Runtime/Core/InsideRuntimeClient.cs:line 267
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at OrleansDashboard.DashboardClient.GrainStats(String grainName)
+   at OrleansDashboard.DashboardMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.InvokeCore(HttpContext context, PathString matchedPath, PathString remainingPath)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[10:56:40 INF] HealthCheck Grain is still alive
+[10:56:42 WRN] Connection attempt to endpoint S127.0.0.1:20000:86864125 failed
+Orleans.Networking.Shared.SocketConnectionException: Unable to connect to 127.0.0.1:20000. Error: ConnectionRefused
+   at Orleans.Networking.Shared.SocketConnectionFactory.ConnectAsync(EndPoint endpoint, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/Shared/SocketConnectionFactory.cs:line 65
+   at Orleans.Runtime.Messaging.ConnectionFactory.ConnectAsync(SiloAddress address, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/ConnectionFactory.cs:line 61
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 193
+[10:56:42 WRN] Did not get response for probe #8 to silo S127.0.0.1:20000:86864125 after 00:00:00.7690172. Current number of consecutive failed probes is 2
+Orleans.Runtime.OrleansMessageRejectionException: Exception while sending message: Orleans.Runtime.Messaging.ConnectionFailedException: Unable to connect to endpoint S127.0.0.1:20000:86864125. See InnerException
+ ---> Orleans.Networking.Shared.SocketConnectionException: Unable to connect to 127.0.0.1:20000. Error: ConnectionRefused
+   at Orleans.Networking.Shared.SocketConnectionFactory.ConnectAsync(EndPoint endpoint, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/Shared/SocketConnectionFactory.cs:line 65
+   at Orleans.Runtime.Messaging.ConnectionFactory.ConnectAsync(SiloAddress address, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/ConnectionFactory.cs:line 61
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 193
+   --- End of inner exception stack trace ---
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 221
+   at Orleans.Runtime.Messaging.ConnectionManager.GetConnectionAsync(SiloAddress endpoint) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 106
+   at Orleans.Runtime.Messaging.MessageCenter.<SendMessage>g__SendAsync|30_0(MessageCenter messageCenter, ValueTask`1 connectionTask, Message msg) in /_/src/Orleans.Runtime/Messaging/MessageCenter.cs:line 236
+   at Orleans.Serialization.Invocation.ResponseCompletionSource.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 98
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at Orleans.Runtime.Scheduler.AsyncClosureWorkItem.Execute() in /_/src/Orleans.Runtime/Scheduler/ClosureWorkItem.cs:line 33
+   at Orleans.Runtime.MembershipService.RemoteSiloProber.Probe(SiloAddress remoteSilo, Int32 probeNumber, CancellationToken cancellationToken) in /_/src/Orleans.Runtime/MembershipService/RemoteSiloProber.cs:line 16
+   at Orleans.Runtime.MembershipService.SiloHealthMonitor.ProbeDirectly(CancellationToken cancellation) in /_/src/Orleans.Runtime/MembershipService/SiloHealthMonitor.cs:line 255
+[10:56:42 ERR] An unhandled exception has occurred while executing the request.
+Orleans.Runtime.OrleansMessageRejectionException: Exception while sending message: Orleans.Runtime.Messaging.ConnectionFailedException: Unable to connect to endpoint S127.0.0.1:20000:86864125. See InnerException
+ ---> Orleans.Networking.Shared.SocketConnectionException: Unable to connect to 127.0.0.1:20000. Error: ConnectionRefused
+   at Orleans.Networking.Shared.SocketConnectionFactory.ConnectAsync(EndPoint endpoint, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/Shared/SocketConnectionFactory.cs:line 65
+   at Orleans.Runtime.Messaging.ConnectionFactory.ConnectAsync(SiloAddress address, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/ConnectionFactory.cs:line 61
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 193
+   --- End of inner exception stack trace ---
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 221
+   at Orleans.Runtime.Messaging.ConnectionManager.GetConnectionAsync(SiloAddress endpoint) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 106
+   at Orleans.Runtime.Messaging.MessageCenter.<SendMessage>g__SendAsync|30_0(MessageCenter messageCenter, ValueTask`1 connectionTask, Message msg) in /_/src/Orleans.Runtime/Messaging/MessageCenter.cs:line 236
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at Orleans.Runtime.Management.ManagementGrain.GetTotalActivationCount() in /_/src/Orleans.Runtime/Core/ManagementGrain.cs:line 212
+   at Orleans.Runtime.TaskRequest`1.CompleteInvokeAsync(Task`1 resultTask) in /_/src/Orleans.Core.Abstractions/Runtime/GrainReference.cs:line 704
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 132
+   at OrleansDashboard.Implementation.GrainProfilerFilter.Invoke(IIncomingGrainCallContext context)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 94
+   at Orleans.Runtime.InsideRuntimeClient.Invoke(IGrainContext target, Message message) in /_/src/Orleans.Runtime/Core/InsideRuntimeClient.cs:line 267
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at OrleansDashboard.Implementation.Grains.DashboardGrain.EnsureCountersAreUpToDate()
+   at OrleansDashboard.Implementation.Grains.DashboardGrain.GetCounters()
+   at Orleans.Runtime.TaskRequest`1.CompleteInvokeAsync(Task`1 resultTask)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 132
+   at OrleansDashboard.Implementation.GrainProfilerFilter.Invoke(IIncomingGrainCallContext context)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 94
+   at Orleans.Runtime.InsideRuntimeClient.Invoke(IGrainContext target, Message message) in /_/src/Orleans.Runtime/Core/InsideRuntimeClient.cs:line 267
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at OrleansDashboard.DashboardClient.DashboardCounters()
+   at OrleansDashboard.DashboardMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.InvokeCore(HttpContext context, PathString matchedPath, PathString remainingPath)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[10:56:42 ERR] An unhandled exception has occurred while executing the request.
+Orleans.Runtime.OrleansMessageRejectionException: Exception while sending message: Orleans.Runtime.Messaging.ConnectionFailedException: Unable to connect to S127.0.0.1:20000:86864125, will retry after 580,6578ms
+   at Orleans.Runtime.Messaging.ConnectionManager.GetConnectionAsync(SiloAddress endpoint) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 99
+   at Orleans.Runtime.Messaging.MessageCenter.<SendMessage>g__SendAsync|30_0(MessageCenter messageCenter, ValueTask`1 connectionTask, Message msg) in /_/src/Orleans.Runtime/Messaging/MessageCenter.cs:line 236
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at Orleans.Runtime.Management.ManagementGrain.GetTotalActivationCount() in /_/src/Orleans.Runtime/Core/ManagementGrain.cs:line 212
+   at Orleans.Runtime.TaskRequest`1.CompleteInvokeAsync(Task`1 resultTask) in /_/src/Orleans.Core.Abstractions/Runtime/GrainReference.cs:line 704
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 132
+   at OrleansDashboard.Implementation.GrainProfilerFilter.Invoke(IIncomingGrainCallContext context)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 94
+   at Orleans.Runtime.InsideRuntimeClient.Invoke(IGrainContext target, Message message) in /_/src/Orleans.Runtime/Core/InsideRuntimeClient.cs:line 267
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at OrleansDashboard.Implementation.Grains.DashboardGrain.EnsureCountersAreUpToDate()
+   at OrleansDashboard.Implementation.Grains.DashboardGrain.GetGrainTracing(String grain)
+   at Orleans.Runtime.TaskRequest`1.CompleteInvokeAsync(Task`1 resultTask)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 132
+   at OrleansDashboard.Implementation.GrainProfilerFilter.Invoke(IIncomingGrainCallContext context)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 94
+   at Orleans.Runtime.InsideRuntimeClient.Invoke(IGrainContext target, Message message) in /_/src/Orleans.Runtime/Core/InsideRuntimeClient.cs:line 267
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at OrleansDashboard.DashboardClient.GrainStats(String grainName)
+   at OrleansDashboard.DashboardMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.InvokeCore(HttpContext context, PathString matchedPath, PathString remainingPath)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[10:56:45 INF] HealthCheck Grain is still alive
+[10:56:45 WRN] Connection attempt to endpoint S127.0.0.1:20000:86864125 failed
+Orleans.Networking.Shared.SocketConnectionException: Unable to connect to 127.0.0.1:20000. Error: ConnectionRefused
+   at Orleans.Networking.Shared.SocketConnectionFactory.ConnectAsync(EndPoint endpoint, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/Shared/SocketConnectionFactory.cs:line 65
+   at Orleans.Runtime.Messaging.ConnectionFactory.ConnectAsync(SiloAddress address, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/ConnectionFactory.cs:line 61
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 193
+[10:56:45 ERR] An unhandled exception has occurred while executing the request.
+Orleans.Runtime.OrleansMessageRejectionException: Exception while sending message: Orleans.Runtime.Messaging.ConnectionFailedException: Unable to connect to endpoint S127.0.0.1:20000:86864125. See InnerException
+ ---> Orleans.Networking.Shared.SocketConnectionException: Unable to connect to 127.0.0.1:20000. Error: ConnectionRefused
+   at Orleans.Networking.Shared.SocketConnectionFactory.ConnectAsync(EndPoint endpoint, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/Shared/SocketConnectionFactory.cs:line 65
+   at Orleans.Runtime.Messaging.ConnectionFactory.ConnectAsync(SiloAddress address, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/ConnectionFactory.cs:line 61
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 193
+   --- End of inner exception stack trace ---
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 221
+   at Orleans.Runtime.Messaging.ConnectionManager.GetConnectionAsync(SiloAddress endpoint) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 106
+   at Orleans.Runtime.Messaging.MessageCenter.<SendMessage>g__SendAsync|30_0(MessageCenter messageCenter, ValueTask`1 connectionTask, Message msg) in /_/src/Orleans.Runtime/Messaging/MessageCenter.cs:line 236
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at Orleans.Runtime.Management.ManagementGrain.GetTotalActivationCount() in /_/src/Orleans.Runtime/Core/ManagementGrain.cs:line 212
+   at Orleans.Runtime.TaskRequest`1.CompleteInvokeAsync(Task`1 resultTask) in /_/src/Orleans.Core.Abstractions/Runtime/GrainReference.cs:line 704
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 132
+   at OrleansDashboard.Implementation.GrainProfilerFilter.Invoke(IIncomingGrainCallContext context)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 94
+   at Orleans.Runtime.InsideRuntimeClient.Invoke(IGrainContext target, Message message) in /_/src/Orleans.Runtime/Core/InsideRuntimeClient.cs:line 267
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at OrleansDashboard.Implementation.Grains.DashboardGrain.EnsureCountersAreUpToDate()
+   at OrleansDashboard.Implementation.Grains.DashboardGrain.GetCounters()
+   at Orleans.Runtime.TaskRequest`1.CompleteInvokeAsync(Task`1 resultTask)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 132
+   at OrleansDashboard.Implementation.GrainProfilerFilter.Invoke(IIncomingGrainCallContext context)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 94
+   at Orleans.Runtime.InsideRuntimeClient.Invoke(IGrainContext target, Message message) in /_/src/Orleans.Runtime/Core/InsideRuntimeClient.cs:line 267
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at OrleansDashboard.DashboardClient.DashboardCounters()
+   at OrleansDashboard.DashboardMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.InvokeCore(HttpContext context, PathString matchedPath, PathString remainingPath)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[10:56:45 ERR] An unhandled exception has occurred while executing the request.
+Orleans.Runtime.OrleansMessageRejectionException: Exception while sending message: Orleans.Runtime.Messaging.ConnectionFailedException: Unable to connect to S127.0.0.1:20000:86864125, will retry after 653,868ms
+   at Orleans.Runtime.Messaging.ConnectionManager.GetConnectionAsync(SiloAddress endpoint) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 99
+   at Orleans.Runtime.Messaging.MessageCenter.<SendMessage>g__SendAsync|30_0(MessageCenter messageCenter, ValueTask`1 connectionTask, Message msg) in /_/src/Orleans.Runtime/Messaging/MessageCenter.cs:line 236
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at Orleans.Runtime.Management.ManagementGrain.GetDetailedGrainStatistics(String[] types, SiloAddress[] hostsIds) in /_/src/Orleans.Runtime/Core/ManagementGrain.cs:line 157
+   at Orleans.Runtime.TaskRequest`1.CompleteInvokeAsync(Task`1 resultTask)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 132
+   at OrleansDashboard.Implementation.GrainProfilerFilter.Invoke(IIncomingGrainCallContext context)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 94
+   at Orleans.Runtime.InsideRuntimeClient.Invoke(IGrainContext target, Message message) in /_/src/Orleans.Runtime/Core/InsideRuntimeClient.cs:line 267
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at OrleansDashboard.Implementation.Grains.DashboardGrain.EnsureCountersAreUpToDate()
+   at OrleansDashboard.Implementation.Grains.DashboardGrain.GetGrainTracing(String grain)
+   at Orleans.Runtime.TaskRequest`1.CompleteInvokeAsync(Task`1 resultTask)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 132
+   at OrleansDashboard.Implementation.GrainProfilerFilter.Invoke(IIncomingGrainCallContext context)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 94
+   at Orleans.Runtime.InsideRuntimeClient.Invoke(IGrainContext target, Message message) in /_/src/Orleans.Runtime/Core/InsideRuntimeClient.cs:line 267
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at OrleansDashboard.DashboardClient.GrainStats(String grainName)
+   at OrleansDashboard.DashboardMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.InvokeCore(HttpContext context, PathString matchedPath, PathString remainingPath)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[10:56:48 WRN] Connection attempt to endpoint S127.0.0.1:20000:86864125 failed
+Orleans.Networking.Shared.SocketConnectionException: Unable to connect to 127.0.0.1:20000. Error: ConnectionRefused
+   at Orleans.Networking.Shared.SocketConnectionFactory.ConnectAsync(EndPoint endpoint, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/Shared/SocketConnectionFactory.cs:line 65
+   at Orleans.Runtime.Messaging.ConnectionFactory.ConnectAsync(SiloAddress address, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/ConnectionFactory.cs:line 61
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 193
+[10:56:48 ERR] An unhandled exception has occurred while executing the request.
+Orleans.Runtime.OrleansMessageRejectionException: Exception while sending message: Orleans.Runtime.Messaging.ConnectionFailedException: Unable to connect to endpoint S127.0.0.1:20000:86864125. See InnerException
+ ---> Orleans.Networking.Shared.SocketConnectionException: Unable to connect to 127.0.0.1:20000. Error: ConnectionRefused
+   at Orleans.Networking.Shared.SocketConnectionFactory.ConnectAsync(EndPoint endpoint, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/Shared/SocketConnectionFactory.cs:line 65
+   at Orleans.Runtime.Messaging.ConnectionFactory.ConnectAsync(SiloAddress address, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/ConnectionFactory.cs:line 61
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 193
+   --- End of inner exception stack trace ---
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 221
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at Orleans.Runtime.Management.ManagementGrain.GetSimpleGrainStatistics(SiloAddress[] hostsIds) in /_/src/Orleans.Runtime/Core/ManagementGrain.cs:line 136
+   at Orleans.Runtime.Management.ManagementGrain.GetSimpleGrainStatistics() in /_/src/Orleans.Runtime/Core/ManagementGrain.cs:line 144
+   at Orleans.Runtime.TaskRequest`1.CompleteInvokeAsync(Task`1 resultTask)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 132
+   at OrleansDashboard.Implementation.GrainProfilerFilter.Invoke(IIncomingGrainCallContext context)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 94
+   at Orleans.Runtime.InsideRuntimeClient.Invoke(IGrainContext target, Message message) in /_/src/Orleans.Runtime/Core/InsideRuntimeClient.cs:line 267
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at OrleansDashboard.Implementation.Grains.DashboardGrain.EnsureCountersAreUpToDate()
+   at OrleansDashboard.Implementation.Grains.DashboardGrain.GetCounters()
+   at Orleans.Runtime.TaskRequest`1.CompleteInvokeAsync(Task`1 resultTask)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 132
+   at OrleansDashboard.Implementation.GrainProfilerFilter.Invoke(IIncomingGrainCallContext context)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 94
+   at Orleans.Runtime.InsideRuntimeClient.Invoke(IGrainContext target, Message message) in /_/src/Orleans.Runtime/Core/InsideRuntimeClient.cs:line 267
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at OrleansDashboard.DashboardClient.DashboardCounters()
+   at OrleansDashboard.DashboardMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.InvokeCore(HttpContext context, PathString matchedPath, PathString remainingPath)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[10:56:48 ERR] An unhandled exception has occurred while executing the request.
+Orleans.Runtime.OrleansMessageRejectionException: Exception while sending message: Orleans.Runtime.Messaging.ConnectionFailedException: Unable to connect to S127.0.0.1:20000:86864125, will retry after 730,8713ms
+   at Orleans.Runtime.Messaging.ConnectionManager.GetConnectionAsync(SiloAddress endpoint) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 99
+   at Orleans.Runtime.Messaging.MessageCenter.<SendMessage>g__SendAsync|30_0(MessageCenter messageCenter, ValueTask`1 connectionTask, Message msg) in /_/src/Orleans.Runtime/Messaging/MessageCenter.cs:line 236
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at Orleans.Runtime.Management.ManagementGrain.GetTotalActivationCount() in /_/src/Orleans.Runtime/Core/ManagementGrain.cs:line 212
+   at Orleans.Runtime.TaskRequest`1.CompleteInvokeAsync(Task`1 resultTask) in /_/src/Orleans.Core.Abstractions/Runtime/GrainReference.cs:line 704
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 132
+   at OrleansDashboard.Implementation.GrainProfilerFilter.Invoke(IIncomingGrainCallContext context)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 94
+   at Orleans.Runtime.InsideRuntimeClient.Invoke(IGrainContext target, Message message) in /_/src/Orleans.Runtime/Core/InsideRuntimeClient.cs:line 267
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at OrleansDashboard.Implementation.Grains.DashboardGrain.EnsureCountersAreUpToDate()
+   at OrleansDashboard.Implementation.Grains.DashboardGrain.GetGrainTracing(String grain)
+   at Orleans.Runtime.TaskRequest`1.CompleteInvokeAsync(Task`1 resultTask)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 132
+   at OrleansDashboard.Implementation.GrainProfilerFilter.Invoke(IIncomingGrainCallContext context)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 94
+   at Orleans.Runtime.InsideRuntimeClient.Invoke(IGrainContext target, Message message) in /_/src/Orleans.Runtime/Core/InsideRuntimeClient.cs:line 267
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at OrleansDashboard.DashboardClient.GrainStats(String grainName)
+   at OrleansDashboard.DashboardMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.InvokeCore(HttpContext context, PathString matchedPath, PathString remainingPath)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[10:56:50 INF] HealthCheck Grain is still alive
+[10:56:51 WRN] Connection attempt to endpoint S127.0.0.1:20000:86864125 failed
+Orleans.Networking.Shared.SocketConnectionException: Unable to connect to 127.0.0.1:20000. Error: ConnectionRefused
+   at Orleans.Networking.Shared.SocketConnectionFactory.ConnectAsync(EndPoint endpoint, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/Shared/SocketConnectionFactory.cs:line 65
+   at Orleans.Runtime.Messaging.ConnectionFactory.ConnectAsync(SiloAddress address, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/ConnectionFactory.cs:line 61
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 193
+[10:56:51 ERR] An unhandled exception has occurred while executing the request.
+Orleans.Runtime.OrleansMessageRejectionException: Exception while sending message: Orleans.Runtime.Messaging.ConnectionFailedException: Unable to connect to endpoint S127.0.0.1:20000:86864125. See InnerException
+ ---> Orleans.Networking.Shared.SocketConnectionException: Unable to connect to 127.0.0.1:20000. Error: ConnectionRefused
+   at Orleans.Networking.Shared.SocketConnectionFactory.ConnectAsync(EndPoint endpoint, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/Shared/SocketConnectionFactory.cs:line 65
+   at Orleans.Runtime.Messaging.ConnectionFactory.ConnectAsync(SiloAddress address, CancellationToken cancellationToken) in /_/src/Orleans.Core/Networking/ConnectionFactory.cs:line 61
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 193
+   --- End of inner exception stack trace ---
+   at Orleans.Runtime.Messaging.ConnectionManager.ConnectAsync(SiloAddress address, ConnectionEntry entry) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 221
+   at Orleans.Runtime.Messaging.MessageCenter.<SendMessage>g__SendAsync|30_0(MessageCenter messageCenter, ValueTask`1 connectionTask, Message msg) in /_/src/Orleans.Runtime/Messaging/MessageCenter.cs:line 236
+   at Orleans.Runtime.Messaging.MessageCenter.<SendMessage>g__SendAsync|30_0(MessageCenter messageCenter, ValueTask`1 connectionTask, Message msg) in /_/src/Orleans.Runtime/Messaging/MessageCenter.cs:line 236
+   at Orleans.Runtime.Messaging.MessageCenter.<SendMessage>g__SendAsync|30_0(MessageCenter messageCenter, ValueTask`1 connectionTask, Message msg) in /_/src/Orleans.Runtime/Messaging/MessageCenter.cs:line 236
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at Orleans.Runtime.Management.ManagementGrain.GetDetailedGrainStatistics(String[] types, SiloAddress[] hostsIds) in /_/src/Orleans.Runtime/Core/ManagementGrain.cs:line 157
+   at Orleans.Runtime.TaskRequest`1.CompleteInvokeAsync(Task`1 resultTask)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 132
+   at OrleansDashboard.Implementation.GrainProfilerFilter.Invoke(IIncomingGrainCallContext context)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 94
+   at Orleans.Runtime.InsideRuntimeClient.Invoke(IGrainContext target, Message message) in /_/src/Orleans.Runtime/Core/InsideRuntimeClient.cs:line 267
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at OrleansDashboard.Implementation.Grains.DashboardGrain.EnsureCountersAreUpToDate()
+   at OrleansDashboard.Implementation.Grains.DashboardGrain.GetCounters()
+   at Orleans.Runtime.TaskRequest`1.CompleteInvokeAsync(Task`1 resultTask)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 132
+   at OrleansDashboard.Implementation.GrainProfilerFilter.Invoke(IIncomingGrainCallContext context)
+   at Orleans.Runtime.GrainMethodInvoker.Invoke() in /_/src/Orleans.Core/Core/GrainMethodInvoker.cs:line 94
+   at Orleans.Runtime.InsideRuntimeClient.Invoke(IGrainContext target, Message message) in /_/src/Orleans.Runtime/Core/InsideRuntimeClient.cs:line 267
+   at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at OrleansDashboard.DashboardClient.DashboardCounters()
+   at OrleansDashboard.DashboardMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.InvokeCore(HttpContext context, PathString matchedPath, PathString remainingPath)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[10:56:51 WRN] Did not get response for probe #9 to silo S127.0.0.1:20000:86864125 after 00:00:00.0006020. Current number of consecutive failed probes is 3
+Orleans.Runtime.OrleansMessageRejectionException: Exception while sending message: Orleans.Runtime.Messaging.ConnectionFailedException: Unable to connect to S127.0.0.1:20000:86864125, will retry after 984,1686ms
+   at Orleans.Runtime.Messaging.ConnectionManager.GetConnectionAsync(SiloAddress endpoint) in /_/src/Orleans.Core/Networking/ConnectionManager.cs:line 99
+   at Orleans.Runtime.Messaging.MessageCenter.<SendMessage>g__SendAsync|30_0(MessageCenter messageCenter, ValueTask`1 connectionTask, Message msg) in /_/src/Orleans.Runtime/Messaging/MessageCenter.cs:line 236
+   at Orleans.Serialization.Invocation.ResponseCompletionSource.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 98
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at Orleans.Runtime.Scheduler.AsyncClosureWorkItem.Execute() in /_/src/Orleans.Runtime/Scheduler/ClosureWorkItem.cs:line 33
+   at Orleans.Runtime.MembershipService.RemoteSiloProber.Probe(SiloAddress remoteSilo, Int32 probeNumber, CancellationToken cancellationToken) in /_/src/Orleans.Runtime/MembershipService/RemoteSiloProber.cs:line 16
+   at Orleans.Runtime.MembershipService.SiloHealthMonitor.ProbeDirectly(CancellationToken cancellation) in /_/src/Orleans.Runtime/MembershipService/SiloHealthMonitor.cs:line 255
+[10:56:51 INF] My range changed from <MultiRange: Size=x634B2A26, %Ring=38,787%> to <(0 0], Size=x100000000, %Ring=100%> increased = True
+[10:56:51 INF] Subscriber stopped successfully on silo S127.0.0.1:11111:86864112, because of {"Description": "This activation is being deactivated due to a failure of server S127.0.0.1:20000:86864125, since it was responsible for this activation's grain directory registration.", "ReasonCode": "InternalFailure", "Exception": null, "$type": "DeactivationReason"}
+[10:56:51 INF] Subscriber stopped successfully on silo S127.0.0.1:11111:86864112, because of {"Description": "This activation is being deactivated due to a failure of server S127.0.0.1:20000:86864125, since it was responsible for this activation's grain directory registration.", "ReasonCode": "InternalFailure", "Exception": null, "$type": "DeactivationReason"}
+[10:56:55 INF] HealthCheck Grain is still alive
+[10:57:00 INF] HealthCheck Grain is still alive
+[10:57:05 INF] HealthCheck Grain is still alive
+[10:57:10 INF] HealthCheck Grain is still alive
+[10:57:15 INF] HealthCheck Grain is still alive
+[10:57:20 INF] HealthCheck Grain is still alive
+[10:57:25 INF] HealthCheck Grain is still alive
+[10:57:30 INF] HealthCheck Grain is still alive
+[10:57:33 INF] Publishing single message
+[10:57:33 INF] Send single message from endpoint on silo S127.0.0.1:11111:86864112: test
+[10:57:35 INF] HealthCheck Grain is still alive
+[10:57:36 INF] Publishing single message
+[10:57:36 INF] Send single message from endpoint on silo S127.0.0.1:11111:86864112: test
+[10:57:40 INF] HealthCheck Grain is still alive
+[10:57:45 INF] HealthCheck Grain is still alive
