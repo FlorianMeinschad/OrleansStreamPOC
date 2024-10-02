@@ -6,8 +6,7 @@ using OrleansPOC.Grains;
 using OrleansPOC.Grains.HealthCheck;
 using OrleansPOC.Grains.Publisher;
 using OrleansPOC.Grains.Subscriber;
-using Streams.Streaming;
-using Streams.Streaming.Interfaces;
+using Streams.Extensions;
 
 namespace OrleansPOC.Endpoints;
 
@@ -36,6 +35,14 @@ public static class SampleEndpoints
 
         logger.LogInformation("{NumOfSubscribers} subscriber grains started", numOfSubs);
         return TypedResults.Ok($"{numOfSubs} subscriber grains started");
+    }
+
+    public static async Task<Ok<string>> StopSubscriberByGrainId([FromRoute] Guid grainId, IGrainFactory grainFactory, ILogger<IEndpointLogger> logger)
+    {
+        logger.LogInformation("Stopping subscriber grain {GrainId}", grainId);
+        var grain = grainFactory.GetGrain<ISubscriberGrain>(grainId);
+        await grain.StopAsync();
+        return TypedResults.Ok($"Subscriber grain {grainId} stopped");
     }
 
     public static async Task<Ok<string>> PublishSingleMessageAsync([FromRoute] string message, ILocalSiloDetails localSiloDetails, IClusterClient clusterClient, ILogger<IEndpointLogger> logger)

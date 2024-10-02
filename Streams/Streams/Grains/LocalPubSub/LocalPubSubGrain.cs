@@ -2,15 +2,20 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Orleans;
 using Orleans.Runtime;
-using Streams.Streaming.Interfaces;
+using Streams.Models.Interfaces;
 
 namespace Streams.Grains.LocalPubSub;
 
-public class LocalPubSubGrain(ILogger<BackgroundService> logger, ILocalMessageBus messageBus, ILocalSiloDetails localSiloDetails) : Grain, ILocalPubSubGrain
+internal class LocalPubSubGrain(ILogger<BackgroundService> logger, ILocalMessageBus messageBus, ILocalSiloDetails localSiloDetails) : Grain, ILocalPubSubGrain
 {
     public Task PublishAsync(string streamId, string message)
     {
         return messageBus.PublishAsync(streamId, message);
+    }
+
+    public Task<IList<IArtisStreamSubscriptionHandle>> GetAllSubscriptionsAsync(string streamId)
+    {
+        throw new NotImplementedException();
     }
 
     public override Task OnActivateAsync(CancellationToken cancellationToken)

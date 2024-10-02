@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Logging;
-using Streams.Streaming;
-using Streams.Streaming.Interfaces;
+using Streams.Extensions;
+using Streams.Models.Interfaces;
 
 namespace OrleansPOC.Grains.Publisher;
 

@@ -7,12 +7,12 @@ using Orleans.Runtime;
 using Streams.Extensions;
 using Streams.Grains.ClusterPubSub;
 using Streams.Grains.LocalPubSub;
-using Streams.Streaming.Interfaces;
+using Streams.Models.Interfaces;
 
 namespace Streams;
 
 [Reentrant]
-public class StreamHandlingBackgroundService(
+internal class StreamHandlingBackgroundService(
     ILocalSiloDetails localSiloDetails,
     IGrainFactory grainFactory,
     ILocalMessageBus localMessageBus,

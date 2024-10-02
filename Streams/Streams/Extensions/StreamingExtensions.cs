@@ -1,8 +1,9 @@
 using Microsoft.Extensions.DependencyInjection;
 using Orleans;
-using Streams.Streaming.Interfaces;
+using Streams.Models;
+using Streams.Models.Interfaces;
 
-namespace Streams.Streaming;
+namespace Streams.Extensions;
 
 public static class StreamingExtensions
 {

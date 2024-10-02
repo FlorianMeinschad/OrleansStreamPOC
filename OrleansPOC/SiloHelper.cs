@@ -7,7 +7,7 @@ using OrleansPOC.Extensions;
 using OrleansPOC.Grains.HealthCheck;
 using Serilog;
 using Serilog.Events;
-using Streams.Streaming;
+using Streams.Extensions;
 
 namespace OrleansPOC;
 
@@ -38,6 +38,7 @@ public static class SiloHelper
             app.Map("/pub/{intervalInSeconds:int}", SampleEndpoints.StartPublisherAsync);
             app.Map("/sub/{numOfSubs:int}", SampleEndpoints.StartSubscribersAsync);
             app.Map("/pub/message/{message}", SampleEndpoints.PublishSingleMessageAsync);
+            app.Map("/pub/stop/{grainId:guid}", SampleEndpoints.StopSubscriberByGrainId);
             app.Map("/health", SampleEndpoints.StartHealthChecksAsync);
 
             Log.Information("Starting Host");

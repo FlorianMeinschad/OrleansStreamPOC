@@ -1,24 +1,23 @@
 using System.Collections.Concurrent;
 using Orleans;
-using Orleans.Runtime;
 using Streams.Exceptions;
 using Streams.Extensions;
 using Streams.Grains.ClusterPubSub;
-using Streams.Streaming.Interfaces;
+using Streams.Models.Interfaces;
 
-namespace Streams.Streaming;
+namespace Streams.Models;
 
 /// <summary>
 /// Erstellt oder liefert Stream.
 /// </summary>
-public class ArtisStreamProvider(IGrainFactory grainFactory, ILocalMessageBus messageBus, ILocalSiloDetails localSiloDetails) : IArtisStreamProvider
+internal class ArtisStreamProvider(IGrainFactory grainFactory, ILocalMessageBus messageBus) : IArtisStreamProvider
 {
     private readonly ConcurrentDictionary<string, object> _streams = new();
 
     public IArtisAsyncStream<T> GetStream<T>(string streamId)
     {
         var grain = grainFactory.GetSingletonGrain<IClusterPubSubGrain>();
-        var stream = _streams.GetOrAdd(streamId, new ArtisAsyncStream<T>(streamId, messageBus, grain, localSiloDetails.SiloAddress));
+        var stream = _streams.GetOrAdd(streamId, new ArtisAsyncStream<T>(streamId, messageBus, grain));
 
         var streamOfT = stream as IArtisAsyncStream<T>;
         if (streamOfT is null)

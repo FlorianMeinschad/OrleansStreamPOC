@@ -2,8 +2,6 @@ using Microsoft.Extensions.Logging;
 using Orleans.Placement;
 using Orleans.Streams;
 using Serilog;
-using Streams.Streaming;
-using Streams.Streaming.Interfaces;
 
 namespace OrleansPOC.Grains.Subscriber;
 /*
