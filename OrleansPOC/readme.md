@@ -8,6 +8,7 @@ Urls:
  - Start Publisher: http://localhost:5000/pub/{intervalInSeconds}
  - Start Subscriber: http://localhost:5000/sub/{numOfSubs}
  - Send single message: http://localhost:5000/pub/message
+ - Start Health Check grain: http://localhost:5000/health
 
 ### POC steps (The issue may not occur every time; multiple attempts might be required):
 

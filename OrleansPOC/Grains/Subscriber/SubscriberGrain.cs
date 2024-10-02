@@ -6,7 +6,7 @@ using Streams.Streaming.Interfaces;
 
 namespace OrleansPOC.Grains.Subscriber;
 
-// [PreferLocalPlacement]
+[PreferLocalPlacement]
 public class SubscriberGrain : Grain, ISubscriberGrain
 {
     private StreamSubscriptionHandle<string>? StreamSubscriptionHandle { get; set; }
@@ -42,7 +42,7 @@ public class SubscriberGrain : Grain, ISubscriberGrain
 
     private Task OnReceiveMessageAsync(string message)
     {
-        Console.WriteLine($"Subscriber received message on silo: {_grainRuntime.SiloAddress}: {Guid.NewGuid().ToString().Substring(0, 4)} - {message}");
+        _logger.LogInformation("Subscriber {GrainId} received message on silo: {SiloAddress}: {Message}", this.GetPrimaryKey(), _grainRuntime.SiloAddress, message);
         return Task.CompletedTask;
     }
 

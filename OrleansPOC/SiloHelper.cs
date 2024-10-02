@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.DependencyInjection;
 using OrleansPOC.Config;
 using OrleansPOC.Endpoints;
 using OrleansPOC.Extensions;
+using OrleansPOC.Grains.HealthCheck;
 using Serilog;
 using Serilog.Events;
 using Streams.Streaming;
@@ -36,6 +38,7 @@ public static class SiloHelper
             app.Map("/pub/{intervalInSeconds:int}", SampleEndpoints.StartPublisherAsync);
             app.Map("/sub/{numOfSubs:int}", SampleEndpoints.StartSubscribersAsync);
             app.Map("/pub/message/{message}", SampleEndpoints.PublishSingleMessageAsync);
+            app.Map("/health", SampleEndpoints.StartHealthChecksAsync);
 
             Log.Information("Starting Host");
             app.Run();
