@@ -24,7 +24,7 @@ internal static class OrleansExtensions
 
     internal static void UseOrleansPoc(this IHostBuilder hostBuilder, SiloConfig config)
     {
-        bool useInMemory = false;
+        bool useInMemory = true;
 
         hostBuilder.UseOrleans(silo =>
         {

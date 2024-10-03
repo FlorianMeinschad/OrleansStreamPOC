@@ -1,8 +1,8 @@
 namespace Streams.Models.Interfaces;
 
-public interface ILocalMessageBus
+public interface ILocalMessageBus<T>
 {
-    Task PublishAsync(string streamId, string message);
-    Task<IArtisStreamSubscriptionHandle> SubscribeAsync(string streamId, Func<string, Task> callback);
+    Task PublishAsync(string streamId, T message);
+    Task<IArtisStreamSubscriptionHandle> SubscribeAsync(string streamId, Func<T, Task> callback);
     Task<IList<IArtisStreamSubscriptionHandle>> GetAllSubscriptionsAsync(string streamId);
 }

@@ -15,11 +15,11 @@ namespace Streams;
 internal class StreamHandlingBackgroundService(
     ILocalSiloDetails localSiloDetails,
     IGrainFactory grainFactory,
-    ILocalMessageBus localMessageBus,
+    IServiceProvider serviceProvider,
     ILogger<StreamHandlingBackgroundService> logger)
     : BackgroundService
 {
-    private readonly LocalPubSubGrain _locationBroadcaster = new(logger, localMessageBus, localSiloDetails);
+    private readonly LocalPubSubGrain _locationBroadcaster = new(logger, serviceProvider, localSiloDetails);
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {

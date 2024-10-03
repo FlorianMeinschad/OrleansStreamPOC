@@ -3,17 +3,17 @@ using Streams.Models.Interfaces;
 
 namespace Streams.Models;
 
-internal record Subscriber(Func<string, Task> Callback)
+internal record Subscriber<T>(Func<T, Task> Callback)
 {
     public Guid SubscriptionId { get; } = Guid.NewGuid();
 }
 
-internal class LocalMessageBus : ILocalMessageBus
+internal class LocalMessageBus<T> : ILocalMessageBus<T>
 {
     // holds lists of local silo subscribers
-    private readonly ConcurrentDictionary<string, List<Subscriber>> _subs = new();
+    private readonly ConcurrentDictionary<string, List<Subscriber<T>>> _subs = new();
 
-    public Task PublishAsync(string streamId, string message)
+    public Task PublishAsync(string streamId, T message)
     {
         if (_subs.TryGetValue(streamId, out var subscribers))
         {
@@ -22,7 +22,10 @@ internal class LocalMessageBus : ILocalMessageBus
             {
                 try
                 {
-                    tasks[i] = subscribers[i].Callback(message);
+                    if (message != null)
+                    {
+                        tasks[i] = subscribers[i].Callback(message);
+                    }
                 }
                 catch (Exception e)
                 {
@@ -36,10 +39,10 @@ internal class LocalMessageBus : ILocalMessageBus
         return Task.CompletedTask;
     }
 
-    public Task<IArtisStreamSubscriptionHandle> SubscribeAsync(string streamId, Func<string, Task> callback)
+    public Task<IArtisStreamSubscriptionHandle> SubscribeAsync(string streamId, Func<T, Task> callback)
     {
-        var sub = _subs.GetOrAdd(streamId, new List<Subscriber>());
-        var subscription = new Subscriber(callback);
+        var sub = _subs.GetOrAdd(streamId, new List<Subscriber<T>>());
+        var subscription = new Subscriber<T>(callback);
         sub.Add(subscription);
 
         var subscriptionHandle = new Disposable(DisposeAction);

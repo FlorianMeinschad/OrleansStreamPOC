@@ -1,3 +1,4 @@
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Orleans;
@@ -6,10 +7,11 @@ using Streams.Models.Interfaces;
 
 namespace Streams.Grains.LocalPubSub;
 
-internal class LocalPubSubGrain(ILogger<BackgroundService> logger, ILocalMessageBus messageBus, ILocalSiloDetails localSiloDetails) : Grain, ILocalPubSubGrain
+internal class LocalPubSubGrain(ILogger<BackgroundService> logger, IServiceProvider serviceProvider, ILocalSiloDetails localSiloDetails) : Grain, ILocalPubSubGrain
 {
-    public Task PublishAsync(string streamId, string message)
+    public Task PublishAsync<T>(string streamId, T message)
     {
+        var messageBus = serviceProvider.GetRequiredService<ILocalMessageBus<T>>();
         return messageBus.PublishAsync(streamId, message);
     }
 

@@ -33,7 +33,7 @@ internal class ClusterPubSubSingletonGrain(ILogger<ClusterPubSubSingletonGrain> 
         return Task.CompletedTask;
     }
 
-    public async Task PublishAsync(string streamId, string message)
+    public async Task PublishAsync<T>(string streamId, T message)
     {
         if (!_subscribers.Any())
         {

@@ -10,7 +10,7 @@ public static class StreamingExtensions
     public static void AddArtisStreaming(this IServiceCollection services)
     {
         services.AddSingleton<IArtisStreamProvider, ArtisStreamProvider>();
-        services.AddSingleton<ILocalMessageBus, LocalMessageBus>();
+        services.AddSingleton(typeof(ILocalMessageBus<>), typeof(LocalMessageBus<>));
         services.AddHostedService<StreamHandlingBackgroundService>();
     }
 

@@ -5,6 +5,6 @@ namespace Streams.Grains.LocalPubSub;
 
 public interface ILocalPubSubGrain : IGrainObserver
 {
-    public Task PublishAsync(string streamId, string message);
+    public Task PublishAsync<T>(string streamId, T message);
     public Task<IList<IArtisStreamSubscriptionHandle>> GetAllSubscriptionsAsync(string streamId);
 }

@@ -5,15 +5,15 @@ namespace Streams.Models;
 
 internal class ArtisAsyncStream<T>(
     string streamId,
-    ILocalMessageBus messageBus,
+    ILocalMessageBus<T> messageBus,
     IClusterPubSubGrain grain) : IArtisAsyncStream<T>
 {
-    public Task PublishAsync(string message)
+    public Task PublishAsync(T message)
     {
         return grain.PublishAsync(streamId, message);
     }
 
-    public async Task<IArtisStreamSubscriptionHandle> SubscribeAsync(Func<string, Task> callback)
+    public async Task<IArtisStreamSubscriptionHandle> SubscribeAsync(Func<T, Task> callback)
     {
         return await messageBus.SubscribeAsync(streamId, callback);
     }
