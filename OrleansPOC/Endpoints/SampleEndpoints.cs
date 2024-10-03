@@ -45,6 +45,14 @@ public static class SampleEndpoints
         return TypedResults.Ok($"Subscriber grain {grainId} stopped");
     }
 
+    public static async Task<Ok<string>> StopSubscriberByGrainButKeepSubscriptionId([FromRoute] Guid grainId, IGrainFactory grainFactory, ILogger<IEndpointLogger> logger)
+    {
+        logger.LogInformation("Stopping subscriber grain {GrainId}", grainId);
+        var grain = grainFactory.GetGrain<ISubscriberGrain>(grainId);
+        await grain.StopButKeepSubscriptionAsync();
+        return TypedResults.Ok($"Subscriber grain {grainId} stopped");
+    }
+
     public static async Task<Ok<string>> PublishSingleMessageAsync([FromRoute] string message, ILocalSiloDetails localSiloDetails, IClusterClient clusterClient, ILogger<IEndpointLogger> logger)
     {
         logger.LogInformation("Publishing single message");
@@ -53,6 +61,15 @@ public static class SampleEndpoints
         await stream.PublishAsync("Message from endpoint: " + message);
         logger.LogInformation("Send single message from endpoint on silo {Silo}: {Message}", localSiloDetails.SiloAddress, message);
         return TypedResults.Ok("Message published successfully");
+    }
+
+    public static async Task<ContentHttpResult> GetAllSubscriptionsAsync(ILocalSiloDetails localSiloDetails, IClusterClient clusterClient, ILogger<IEndpointLogger> logger)
+    {
+        logger.LogInformation("Retrieving all subscribers from stream {StreamId} single message", StreamChannelIds.TEST_STREAM_ID);
+        var streamProvider = clusterClient.GetArtisStreamProvider(StreamProviderIds.STREAM);
+        var stream = streamProvider.GetStream<string>(StreamChannelIds.TEST_STREAM_ID);
+        var subs = string.Join(Environment.NewLine, (await stream.GetAllSubscriptionsAsync()).Select(x => $"{x.SiloAddress.ToString()}: {x.StreamId} - {x.SubscriptionId}").ToArray());
+        return TypedResults.Content(subs, "text/plain");
     }
 
     public static async Task<Ok<string>> StartHealthChecksAsync(IGrainFactory grainFactory)

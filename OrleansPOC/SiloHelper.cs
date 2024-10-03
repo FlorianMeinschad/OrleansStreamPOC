@@ -39,6 +39,8 @@ public static class SiloHelper
             app.Map("/sub/{numOfSubs:int}", SampleEndpoints.StartSubscribersAsync);
             app.Map("/pub/message/{message}", SampleEndpoints.PublishSingleMessageAsync);
             app.Map("/pub/stop/{grainId:guid}", SampleEndpoints.StopSubscriberByGrainId);
+            app.Map("/pub/stopGrainOnly/{grainId:guid}", SampleEndpoints.StopSubscriberByGrainButKeepSubscriptionId);
+            app.Map("/sub/list", SampleEndpoints.GetAllSubscriptionsAsync);
             app.Map("/health", SampleEndpoints.StartHealthChecksAsync);
 
             Log.Information("Starting Host");

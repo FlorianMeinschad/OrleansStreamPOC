@@ -15,9 +15,10 @@ internal class LocalPubSubGrain(ILogger<BackgroundService> logger, IServiceProvi
         return messageBus.PublishAsync(streamId, message);
     }
 
-    public Task<IList<IArtisStreamSubscriptionHandle>> GetAllSubscriptionsAsync(string streamId)
+    public Task<IList<IArtisStreamSubscriptionHandle>> GetAllSubscriptionsAsync<T>(string streamId)
     {
-        throw new NotImplementedException();
+        var messageBus = serviceProvider.GetRequiredService<ILocalMessageBus<T>>();
+        return messageBus.GetAllSubscriptionsAsync(streamId);
     }
 
     public override Task OnActivateAsync(CancellationToken cancellationToken)

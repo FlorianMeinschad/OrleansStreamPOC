@@ -2,6 +2,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Orleans;
 using Streams.Models;
 using Streams.Models.Interfaces;
+using Streams.Models.MessageBus;
 
 namespace Streams.Extensions;
 

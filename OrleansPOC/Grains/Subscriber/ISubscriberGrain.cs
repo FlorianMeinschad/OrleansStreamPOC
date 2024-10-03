@@ -4,4 +4,5 @@ public interface ISubscriberGrain : IGrainWithGuidKey
 {
     public Task StartAsync();
     public Task StopAsync();
+    public Task StopButKeepSubscriptionAsync();
 }

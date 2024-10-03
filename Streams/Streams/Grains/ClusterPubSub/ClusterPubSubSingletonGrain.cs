@@ -49,7 +49,7 @@ internal class ClusterPubSubSingletonGrain(ILogger<ClusterPubSubSingletonGrain> 
             {
                 await subscriber.Value.PublishAsync(streamId, message);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 var entry = _subscriberErrorCount.GetOrAdd(subscriber.Key, 0);
                 entry += 1;
@@ -69,18 +69,15 @@ internal class ClusterPubSubSingletonGrain(ILogger<ClusterPubSubSingletonGrain> 
         }
     }
 
-    public async Task<IList<IArtisStreamSubscriptionHandle>> GetAllSubscriptionsAsync(string streamId)
+    public async Task<IList<IArtisStreamSubscriptionHandle>> GetAllSubscriptionsAsync<T>(string streamId)
     {
-        throw new NotImplementedException();
-
-        /*
-        var subscriptions = new ConcurrentBag<IArtisStreamSubscriptionHandle>();
+        var subscriptions = new List<IArtisStreamSubscriptionHandle>();
         foreach (var subscriber in _subscribers)
         {
-            subscriptions.Add(await subscriber.Value.GetAllSubscriptionsAsync(streamId));
+            subscriptions.AddRange(await subscriber.Value.GetAllSubscriptionsAsync<T>(streamId));
         }
-        throw new NotImplementedException();
-        */
+
+        return subscriptions;
     }
 
     public override Task OnActivateAsync(CancellationToken cancellationToken)

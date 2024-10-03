@@ -1,18 +1,19 @@
+using Orleans;
+using Orleans.Runtime;
 using Streams.Models.Interfaces;
 
 namespace Streams.Models;
 
-internal record ArtisStreamSubscriptionHandle(string StreamId, IAsyncDisposable Subscription) : IArtisStreamSubscriptionHandle
+[GenerateSerializer]
+internal sealed record ArtisStreamSubscriptionHandle(Guid SubscriptionId, string StreamId, SiloAddress SiloAddress, IUnsubscribe UnsubscribeHandler) : IArtisStreamSubscriptionHandle
 {
-    public Guid SubscriptionId { get; } = Guid.NewGuid();
-
-    public static IArtisStreamSubscriptionHandle CreateAsync(string streamId, IAsyncDisposable subscription)
+    public static IArtisStreamSubscriptionHandle Create(Guid subscriptionId, string streamId, SiloAddress siloAddress, IUnsubscribe unsubscribeMethod)
     {
-        return new ArtisStreamSubscriptionHandle(streamId, subscription);
+        return new ArtisStreamSubscriptionHandle(subscriptionId, streamId, siloAddress, unsubscribeMethod);
     }
 
     public async Task UnsubscribeAsync()
     {
-        await Subscription.DisposeAsync();
+        await UnsubscribeHandler.UnsubscribeAsync();
     }
 }

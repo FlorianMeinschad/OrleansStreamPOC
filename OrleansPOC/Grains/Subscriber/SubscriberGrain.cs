@@ -39,6 +39,12 @@ public class SubscriberGrain : Grain, ISubscriberGrain
         DeactivateOnIdle();
     }
 
+    public Task StopButKeepSubscriptionAsync()
+    {
+        DeactivateOnIdle();
+        return Task.CompletedTask;
+    }
+
     public override async Task OnActivateAsync(CancellationToken cancellationToken)
     {
         _subscription = await _stream.SubscribeAsync(OnReceiveMessageAsync);

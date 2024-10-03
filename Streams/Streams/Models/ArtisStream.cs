@@ -18,9 +18,8 @@ internal class ArtisAsyncStream<T>(
         return await messageBus.SubscribeAsync(streamId, callback);
     }
 
-    public Task<IList<IArtisStreamSubscriptionHandle>> GetAllSubscriptionsAsync()
+    public async Task<IList<IArtisStreamSubscriptionHandle>> GetAllSubscriptionsAsync()
     {
-        throw new NotImplementedException();
-        // return grain.GetAllSubscriptionsAsync();
+        return await grain.GetAllSubscriptionsAsync<T>(streamId);
     }
 }

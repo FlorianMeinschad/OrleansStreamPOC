@@ -8,7 +8,9 @@ Urls:
  - Start Publisher: http://localhost:5000/pub/{intervalInSeconds}
  - Start Subscriber: http://localhost:5000/sub/{numOfSubs}
  - Stop Subscriber: http://localhost:5000/pub/stop/{grainId}
+ - Stop Subscriber but keep subscription: http://localhost:5000/pub/stopGrainOnly/{grainId}
  - Send single message: http://localhost:5000/pub/message
+ - List subscribers: http://localhost:5000/sub/list
  - Start Health Check grain: http://localhost:5000/health
 
 ### POC steps (The issue may not occur every time; multiple attempts might be required):
