@@ -8,14 +8,24 @@ internal class ArtisAsyncStream<T>(
     ILocalMessageBus<T> messageBus,
     IClusterPubSubGrain grain) : IArtisAsyncStream<T>
 {
-    public Task PublishAsync(T message)
+    public Task OnNextAsync(T message)
     {
-        return grain.PublishAsync(streamId, message);
+        return grain.OnNextAsync(streamId, message);
     }
 
-    public async Task<IArtisStreamSubscriptionHandle> SubscribeAsync(Func<T, Task> callback)
+    public async Task<IArtisStreamSubscriptionHandle> SubscribeAsync(Func<T, Task> onNextAsync)
     {
-        return await messageBus.SubscribeAsync(streamId, callback);
+        return await messageBus.SubscribeAsync(streamId, onNextAsync);
+    }
+
+    public async Task<IArtisStreamSubscriptionHandle> SubscribeAsync(Func<T, Task> onNextAsync, Func<Exception, Task> onErrorAsync)
+    {
+        return await messageBus.SubscribeAsync(streamId, onNextAsync, onErrorAsync);
+    }
+
+    public async Task<IArtisStreamSubscriptionHandle> SubscribeAsync(Func<T, Task> onNextAsync, Func<Exception, Task> onErrorAsync, Func<Task> onCompletedAsync)
+    {
+        return await messageBus.SubscribeAsync(streamId, onNextAsync, onErrorAsync, onCompletedAsync);
     }
 
     public async Task<IList<IArtisStreamSubscriptionHandle>> GetAllSubscriptionsAsync()

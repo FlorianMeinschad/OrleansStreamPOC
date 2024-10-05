@@ -58,7 +58,7 @@ public static class SampleEndpoints
         logger.LogInformation("Publishing single message");
         var streamProvider = clusterClient.GetArtisStreamProvider(StreamProviderIds.STREAM);
         var stream = streamProvider.GetStream<string>(StreamChannelIds.TEST_STREAM_ID);
-        await stream.PublishAsync("Message from endpoint: " + message);
+        await stream.OnNextAsync("Message from endpoint: " + message);
         logger.LogInformation("Send single message from endpoint on silo {Silo}: {Message}", localSiloDetails.SiloAddress, message);
         return TypedResults.Ok("Message published successfully");
     }

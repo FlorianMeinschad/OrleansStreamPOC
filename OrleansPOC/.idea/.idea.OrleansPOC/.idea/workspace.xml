@@ -9,17 +9,18 @@
   <component name="ChangeListManager">
     <list default="true" id="44fa56d7-a8f6-4df1-8508-4ec44dbb931b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OrleansPOC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OrleansPOC/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Endpoints/SampleEndpoints.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Endpoints/SampleEndpoints.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Grains/Publisher/PublisherGrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Grains/Publisher/PublisherGrain.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grains/Subscriber/SubscriberGrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Grains/Subscriber/SubscriberGrain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Streams/Streams/Grains/ArtisPubSubGrain.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Streams/Streams/Grains/ClusterPubSub/ClusterPubSubSingletonGrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Grains/ClusterPubSub/ClusterPubSubSingletonGrain.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Streams/Streams/Grains/ClusterPubSub/IClusterPubSubGrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Grains/ClusterPubSub/IClusterPubSubGrain.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Streams/Streams/Grains/LocalPubSub/ILocalPubSubGrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Grains/LocalPubSub/ILocalPubSubGrain.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Streams/Streams/Grains/LocalPubSub/LocalPubSubGrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Grains/LocalPubSub/LocalPubSubGrain.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Streams/Streams/Models/ArtisStream.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Models/ArtisStream.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Streams/Streams/Models/ArtisStreamProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Models/ArtisStreamProvider.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Streams/Streams/Models/Interfaces/IArtisAsyncStream.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Models/Interfaces/IArtisAsyncStream.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Streams/Streams/Models/Interfaces/ILocalMessageBus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Models/Interfaces/ILocalMessageBus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Streams/Streams/Models/LocalMessageBus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Models/LocalMessageBus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Streams/Streams/Models/MessageBus/LocalMessageBus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Models/MessageBus/LocalMessageBus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Streams/Streams/Models/MessageBus/Subscriber.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/Streams/Models/MessageBus/Subscriber.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +53,7 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d3a451850004403293b134b9fe18ce3fc8f920/71/90990893/IObserver`1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d3a451850004403293b134b9fe18ce3fc8f920/b9/499f6195/IAsyncDisposable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1fc215ed7c32cb98bebde4384f8def5e507bc2598628b3dae8dcd116a991bb9f/ClientStreamingProviderRuntime.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/36f45ed28114a764e111a85f4f31c869c07d401d27e94a9f71c727fa9ec3ea/StreamDirectory.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/40306acd66d12e7fc761c6bdcbd33b6efd9d66352fe2eca8785ff11c9f7661/PersistentStreamProvider.cs" root0="FORCE_HIGHLIGHTING" />
@@ -81,32 +83,15 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e2ab6adac8f7f8d6978505a1f5d698ce046c2218c7cbb29d29f9cf6e657e7/StreamSubscriptionHandle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e4e4285d6b88b327c7eeafbead6503fe1b08331beec3d3676ca4b974de5a82c/GrainInterfaceTypeToGrainTypeResolver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Endpoints/SampleEndpoints.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/OrleansPOC/OrleansPOC/Endpoints/SampleEndpoints.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/OrleansPOC/OrleansPOC/Endpoints/SampleEndpoints.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/OrleansPOC/OrleansPOC/Extensions/OrleansExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/OrleansPOC/OrleansPOC/Extensions/OrleansExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/OrleansPOC/OrleansPOC/Extensions/OrleansExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/OrleansPOC/OrleansPOC/Extensions/OrleansExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/OrleansPOC/OrleansPOC/Extensions/OrleansExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/OrleansPOC/OrleansPOC/Extensions/OrleansExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/OrleansPOC/OrleansPOC/Grains/HealthCheck/HealthCheckGrain.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/OrleansPOC/OrleansPOC/Grains/HealthCheck/IHealthCheckGrain.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/OrleansPOC/OrleansPOC/Grains/Publisher/PublisherGrain.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Grains/Publisher/PublisherGrain.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/OrleansPOC/OrleansPOC/Grains/Subscriber/SubscriberGrain.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Grains/Subscriber/SubscriberGrain.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SiloHelper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/OrleansPOC/OrleansPOC/SiloHelper.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/OrleansPOC/OrleansPOC/SiloHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Silo1/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/OrleansPOC/Silo2/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/OrleansPOC/Silo2/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Streams/Streams/Grains/ArtisPubSubGrain.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Streams/Streams/Grains/ClusterPubSub/ClusterPubSubSingletonGrain.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Streams/Streams/Grains/ClusterPubSub/IClusterPubSubGrain.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Streams/Streams/Grains/LocalPubSub/ILocalPubSubGrain.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Streams/Streams/Grains/LocalPubSub/LocalPubSubGrain.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/OrleansPOC/Streams/Streams/Streaming/ArtisStream.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -120,23 +105,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.OrleansPOC.executor": "Run",
-    ".NET Project.Silo1.executor": "Run",
-    ".NET Project.Silo2.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/custom-streams",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.OrleansPOC.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.Silo1.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.Silo2.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/custom-streams&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected=".NET Project.Silo1">
+}</component>
+  <component name="RunManager" selected=".NET Project.Silo2">
     <configuration name="Silo1" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/../Silo1/bin/Debug/net8.0/Silo1.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -304,6 +289,8 @@
       <workItem from="1727413915921" duration="15101000" />
       <workItem from="1727672428608" duration="1847000" />
       <workItem from="1727932364921" duration="1488000" />
+      <workItem from="1727934010537" duration="19017000" />
+      <workItem from="1727958947818" duration="2250000" />
     </task>
     <task id="LOCAL-00001" summary="initial setup">
       <option name="closed" value="true" />
@@ -393,7 +380,23 @@
       <option name="project" value="LOCAL" />
       <updated>1727874282815</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="use generics">
+      <option name="closed" value="true" />
+      <created>1727939236048</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1727939236048</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add GetAllSubscriptionsAsync method">
+      <option name="closed" value="true" />
+      <created>1727956715590</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1727956715590</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -423,23 +426,25 @@
     <MESSAGE value="simple working implementation (not fully solved)" />
     <MESSAGE value="add some logging" />
     <MESSAGE value="refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
+    <MESSAGE value="use generics" />
+    <MESSAGE value="add GetAllSubscriptionsAsync method" />
+    <option name="LAST_COMMIT_MESSAGE" value="add GetAllSubscriptionsAsync method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/../Streams/Streams/Models/LocalMessageBus.cs</url>
-          <line>45</line>
-          <properties documentPath="D:\OrleansPOC\Streams\Streams\Models\LocalMessageBus.cs" containingFunctionPresentation="Method 'SubscribeAsync'">
+          <url>file://$PROJECT_DIR$/Endpoints/SampleEndpoints.cs</url>
+          <line>67</line>
+          <properties documentPath="D:\OrleansPOC\OrleansPOC\Endpoints\SampleEndpoints.cs" containingFunctionPresentation="Method 'GetAllSubscriptionsAsync'">
             <startOffsets>
-              <option value="1269" />
+              <option value="3353" />
             </startOffsets>
             <endOffsets>
-              <option value="1310" />
+              <option value="3476" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -9,6 +9,6 @@ public interface IClusterPubSubGrain : IGrainWithSingletonKey
 {
     Task AddSiloAsync(SiloAddress siloAddress, ILocalPubSubGrain pubSub);
     Task RemoveSiloAsync(SiloAddress siloAddress);
-    Task PublishAsync<T>(string streamId, T message);
+    Task OnNextAsync<T>(string streamId, T message);
     Task<IList<IArtisStreamSubscriptionHandle>> GetAllSubscriptionsAsync<T>(string streamId);
 }

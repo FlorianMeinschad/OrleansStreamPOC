@@ -15,7 +15,7 @@ public class PublisherGrain(ILogger<PublisherGrain> logger, IClusterClient clien
         _stream = _streamProvider.GetStream<string>(StreamChannelIds.TEST_STREAM_ID);
         logger.LogInformation("Publisher started successfully on silo {Silo}", grainRuntime.SiloAddress);
 
-        this.RegisterGrainTimer<object>(_ => _stream.PublishAsync("Publisher says hello"), null, TimeSpan.FromSeconds(1), interval);
+        this.RegisterGrainTimer<object>(_ => _stream.OnNextAsync("Publisher says hello"), null, TimeSpan.FromSeconds(1), interval);
         return Task.CompletedTask;
     }
 

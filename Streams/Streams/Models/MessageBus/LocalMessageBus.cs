@@ -9,21 +9,25 @@ internal class LocalMessageBus<T>(ILocalSiloDetails localSiloDetails) : ILocalMe
     // holds lists of local silo subscribers
     private readonly ConcurrentDictionary<string, ConcurrentBag<Subscriber<T>>> _subs = new();
 
-    public Task PublishAsync(string streamId, T message)
+    public Task OnNextAsync(string streamId, T message)
     {
         if (!_subs.TryGetValue(streamId, out var subscribers)) {
             return Task.CompletedTask;
         }
 
-        var tasks = subscribers.Select(s =>
+        var tasks = subscribers.Select(async s =>
             {
                 try
                 {
-                    return s.Callback(message);
+                    return s.OnNextAsync(message);
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    // ignore individual subscriber failures
+                    if (s.OnErrorAsync != null)
+                    {
+                        await s.OnErrorAsync(ex);
+                    }
+
                     return Task.CompletedTask;
                 }
             }).ToArray();
@@ -31,16 +35,22 @@ internal class LocalMessageBus<T>(ILocalSiloDetails localSiloDetails) : ILocalMe
         return Task.WhenAll(tasks);
     }
 
-    public Task<IArtisStreamSubscriptionHandle> SubscribeAsync(string streamId, Func<T, Task> callback)
+    public Task<IArtisStreamSubscriptionHandle> SubscribeAsync(string streamId, Func<T, Task> onNextAsync)
     {
-        var streamSubscription = _subs.GetOrAdd(streamId, new ConcurrentBag<Subscriber<T>>());
-        var subscriber = new Subscriber<T>(callback);
-        streamSubscription.Add(subscriber);
+        var subscriber = new Subscriber<T>(onNextAsync);
+        return SubscribeInternalAsync(streamId, subscriber);
+    }
 
-        return Task.FromResult(ArtisStreamSubscriptionHandle.Create(subscriber.Id, streamId, localSiloDetails.SiloAddress, new UnsubscribeHandler(async () =>
-        {
-            await RemoveSubscriberAsync(streamId, subscriber);
-        })));
+    public Task<IArtisStreamSubscriptionHandle> SubscribeAsync(string streamId, Func<T, Task> onNextAsync, Func<Exception, Task> onErrorAsync)
+    {
+        var subscriber = new Subscriber<T>(onNextAsync, onErrorAsync);
+        return SubscribeInternalAsync(streamId, subscriber);
+    }
+
+    public Task<IArtisStreamSubscriptionHandle> SubscribeAsync(string streamId, Func<T, Task> onNextAsync, Func<Exception, Task> onErrorAsync, Func<Task> onCompletedAsync)
+    {
+        var subscriber = new Subscriber<T>(onNextAsync, onErrorAsync, onCompletedAsync);
+        return SubscribeInternalAsync(streamId, subscriber);
     }
 
     public Task<IList<IArtisStreamSubscriptionHandle>> GetAllSubscriptionsAsync(string streamId)
@@ -61,7 +71,17 @@ internal class LocalMessageBus<T>(ILocalSiloDetails localSiloDetails) : ILocalMe
         return Task.FromResult<IList<IArtisStreamSubscriptionHandle>>(handles);
     }
 
-    // Private method to remove a subscriber from the collection
+    private Task<IArtisStreamSubscriptionHandle> SubscribeInternalAsync(string streamId, Subscriber<T> subscriber)
+    {
+        var streamSubscription = _subs.GetOrAdd(streamId, new ConcurrentBag<Subscriber<T>>());
+        streamSubscription.Add(subscriber);
+
+        return Task.FromResult(ArtisStreamSubscriptionHandle.Create(subscriber.Id, streamId, localSiloDetails.SiloAddress, new UnsubscribeHandler(async () =>
+        {
+            await RemoveSubscriberAsync(streamId, subscriber);
+        })));
+    }
+
     private Task RemoveSubscriberAsync(string streamId, Subscriber<T> subscriber)
     {
         if (_subs.TryGetValue(streamId, out var subscribers))

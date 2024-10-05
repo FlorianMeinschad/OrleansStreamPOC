@@ -33,7 +33,7 @@ internal class ClusterPubSubSingletonGrain(ILogger<ClusterPubSubSingletonGrain> 
         return Task.CompletedTask;
     }
 
-    public async Task PublishAsync<T>(string streamId, T message)
+    public async Task OnNextAsync<T>(string streamId, T message)
     {
         if (!_subscribers.Any())
         {
@@ -47,7 +47,7 @@ internal class ClusterPubSubSingletonGrain(ILogger<ClusterPubSubSingletonGrain> 
             // error handling - what should happen if a silo is not reachable anymore?
             try
             {
-                await subscriber.Value.PublishAsync(streamId, message);
+                await subscriber.Value.OnNextAsync(streamId, message);
             }
             catch (Exception)
             {

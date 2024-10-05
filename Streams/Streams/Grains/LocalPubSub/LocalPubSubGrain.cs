@@ -9,10 +9,10 @@ namespace Streams.Grains.LocalPubSub;
 
 internal class LocalPubSubGrain(ILogger<BackgroundService> logger, IServiceProvider serviceProvider, ILocalSiloDetails localSiloDetails) : Grain, ILocalPubSubGrain
 {
-    public Task PublishAsync<T>(string streamId, T message)
+    public Task OnNextAsync<T>(string streamId, T message)
     {
         var messageBus = serviceProvider.GetRequiredService<ILocalMessageBus<T>>();
-        return messageBus.PublishAsync(streamId, message);
+        return messageBus.OnNextAsync(streamId, message);
     }
 
     public Task<IList<IArtisStreamSubscriptionHandle>> GetAllSubscriptionsAsync<T>(string streamId)
