@@ -21,8 +21,14 @@ public class PublisherGrain : Grain, IPublisherGrain
     {
         _stream = _streamProvider.GetStream<string>(StreamChannelIds.TEST_STREAM_ID);
         _logger.LogInformation("Publisher started successfully on silo {Silo}", _grainRuntime.SiloAddress);
-
         this.RegisterGrainTimer<object>(_ => _stream.OnNextAsync("Message sent from publisher"), null, TimeSpan.FromSeconds(1), interval);
+        return Task.CompletedTask;
+    }
+
+    public Task CompleteAsync()
+    {
+        _stream = _streamProvider.GetStream<string>(StreamChannelIds.TEST_STREAM_ID);
+        _stream.OnCompletedAsync();
         return Task.CompletedTask;
     }
 

@@ -9,6 +9,11 @@
   <component name="ChangeListManager">
     <list default="true" id="44fa56d7-a8f6-4df1-8508-4ec44dbb931b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OrleansPOC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OrleansPOC/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Endpoints/SampleEndpoints.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Endpoints/SampleEndpoints.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grains/Publisher/IPublisherGrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Grains/Publisher/IPublisherGrain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grains/Publisher/PublisherGrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Grains/Publisher/PublisherGrain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrleansPOC.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/OrleansPOC.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SiloHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SiloHelper.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +46,8 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d3a451850004403293b134b9fe18ce3fc8f920/71/90990893/IObserver`1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d3a451850004403293b134b9fe18ce3fc8f920/b9/499f6195/IAsyncDisposable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/104e2375ffaf84083bea7736e391f82abad6f1e3fb63d7ac482acc3d25330/StreamSequenceToken.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1fc215ed7c32cb98bebde4384f8def5e507bc2598628b3dae8dcd116a991bb9f/ClientStreamingProviderRuntime.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/36f45ed28114a764e111a85f4f31c869c07d401d27e94a9f71c727fa9ec3ea/StreamDirectory.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/40306acd66d12e7fc761c6bdcbd33b6efd9d66352fe2eca8785ff11c9f7661/PersistentStreamProvider.cs" root0="FORCE_HIGHLIGHTING" />
@@ -54,6 +61,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/88389d64c47af9d994ad443780f02d597a5d5b6d9cb53693c250a5ff1ce4a5/StreamConsumerExtension.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8ecf50c38230a751f4d85b03f66fd8bb9cb4574f6a2413058a7c244a21f34da/ClusterClientPersistentStreamConfigurator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/996fd67a8795234761cad5f77e08c126cdeba4a74607799eb5562f0a480f7/GrainStreamingExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9baca629a1608b462f6e28374d80c678418cedf261cb5292e6752e08744e772/IAsyncBatchObservable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9c3b308c2aabb33ceaeb129b1f61b2fa9f577255c7b331ac073b3d4ecf43da7/IStreamProviderRuntime.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a0cf7044f6bac0d040405ba1216529c1eea01ddb2faf194384a599981921b2/IAsyncStream.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b0b5ade6e9d751f525f3cd3f87bf2a76fe85b851449cae1377dd37fe5dd6f/IAsyncBatchProducer.cs" root0="FORCE_HIGHLIGHTING" />
@@ -74,7 +82,6 @@
     <setting file="file://$PROJECT_DIR$/Grains/Subscriber/SubscriberGrain.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SiloHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Silo1/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Streams/Streams/Grains/ArtisPubSubGrain.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Streams/Streams/Grains/ClusterPubSub/ClusterPubSubSingletonGrain.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Streams/Streams/Grains/ClusterPubSub/IClusterPubSubGrain.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Streams/Streams/Grains/LocalPubSub/ILocalPubSubGrain.cs" root0="FORCE_HIGHLIGHTING" />
@@ -95,23 +102,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.OrleansPOC.executor": "Run",
-    ".NET Project.Silo1.executor": "Run",
-    ".NET Project.Silo2.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/default-streams",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.OrleansPOC.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.Silo1.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.Silo2.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/default-streams&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected=".NET Project.Silo2">
+}</component>
+  <component name="RunManager" selected=".NET Project.Silo1">
     <configuration name="Silo1" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/../Silo1/bin/Debug/net8.0/Silo1.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -244,6 +251,7 @@
       <workItem from="1727672428608" duration="1847000" />
       <workItem from="1727676470126" duration="6755000" />
       <workItem from="1727844487738" duration="1146000" />
+      <workItem from="1728282015979" duration="337000" />
     </task>
     <task id="LOCAL-00001" summary="initial setup">
       <option name="closed" value="true" />
@@ -365,5 +373,24 @@
     <MESSAGE value="add some logging" />
     <MESSAGE value="add manual stream message endpoint" />
     <option name="LAST_COMMIT_MESSAGE" value="add manual stream message endpoint" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Grains/Subscriber/SubscriberGrain.cs</url>
+          <line>69</line>
+          <properties documentPath="D:\OrleansPOC\OrleansPOC\Grains\Subscriber\SubscriberGrain.cs" containingFunctionPresentation="Method 'OnCompletedAsync'">
+            <startOffsets>
+              <option value="2659" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2716" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

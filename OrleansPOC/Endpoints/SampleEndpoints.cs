@@ -37,6 +37,14 @@ public static class SampleEndpoints
         return TypedResults.Ok($"{numOfSubs} subscriber grains started");
     }
 
+    public static async Task<Ok<string>> CompleteStreamAsync(IGrainFactory grainFactory)
+    {
+        var publisherGrain = grainFactory.GetGrain<IPublisherGrain>(Guid.Empty);
+        await publisherGrain.CompleteAsync();
+        return TypedResults.Ok($"Publishing stream completed");
+    }
+
+
     public static async Task<Ok<string>> PublishSingleMessageAsync([FromRoute] string message, ILocalSiloDetails localSiloDetails, IClusterClient clusterClient, ILogger<IEndpointLogger> logger)
     {
         logger.LogInformation("Publishing single message");
